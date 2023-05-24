@@ -1,5 +1,5 @@
 # BYTESIZED32
-Byte-sized text games for code generation tasks on virtual environments.
+Byte-sized text games for code generation tasks on virtual environments introduced in the paper [ByteSized32: A Corpus and Challenge Task for Generating Task-Specific World Models Expressed as Text Games](https://tinyurl.com/2s3u77tz).
 
 ## Quickstart
 Clone the repository:
