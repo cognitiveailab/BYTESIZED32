@@ -1,0 +1,52 @@
+Task Description: Your task is to change all fossil-fuel power stations to use renewable energy while keeping the same capacity.
+
+Initial Observation: You are in charge of 4 regions. Modify power plants in the regions to use clean energy.
+	region 0 has enough sunshine all year round. It has a fossil-fuel power station, whose current generation capasity is 1000kW and is at 100% efficiency.
+	region 1 is near a large river. It has a fossil-fuel power station, whose current generation capasity is 1000kW and is at 100% efficiency.
+	region 2 is near a large river. It has a fossil-fuel power station, whose current generation capasity is 1000kW and is at 100% efficiency.
+	region 3 has steady wind. It has a fossil-fuel power station, whose current generation capasity is 1000kW and is at 100% efficiency.
+
+
+Type 'help' for a list of possible actions.
+
+> change region 0 to solar farm
+Observaton: Region 0 now has a solar farm.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> change region 1 to hydroelectric power station
+Observaton: Region 1 now has a hydroelectric power station.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> change region 2 to hydroelectric power station
+Observaton: Region 2 now has a hydroelectric power station.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> change region 3 to wind farm
+Observaton: Region 3 now has a wind farm.
+
+Current step: 4
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

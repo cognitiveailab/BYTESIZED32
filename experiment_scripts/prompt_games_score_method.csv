@@ -1,0 +1,16 @@
+cooking.py,thermometer.py
+cooking.py,conductivity.py
+mix-paint.py,cooking.py
+sunburn.py,dishwasher.py
+conductivity.py,wash-clothes.py
+metal-detector.py,balance-scale-heaviest.py
+clean-energy.py,volume-stone.py
+sunburn.py,plant-tree.py
+volume-container.py,lit-lightbulb.py
+wash-clothes.py,volume-stone.py
+balance-scale-weigh.py,make-campfire.py
+dishwasher.py,cooking.py
+plant-tree.py,balance-scale-heaviest.py
+lit-lightbulb.py,inclined-plane.py
+mix-paint.py,volume.py
+volume-container.py,balance-scale-heaviest.py

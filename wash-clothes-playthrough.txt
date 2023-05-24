@@ -1,0 +1,442 @@
+Task Description: Your task is to wash the dirty clothes and dry them.
+
+Initial Observation: You find yourself in a room.  In the room, you see:
+	yourself
+	a washing machine that is currently closed
+	a dryer that is currently closed
+	a bottle of detergent
+	a dirty dry skirt
+	a dirty dry jacket
+	a dirty dry coat
+	a dirty dry shirt
+	a clean dry vest
+	a clean dry dress
+	a clean dry sweater
+	a basket
+
+
+Type 'help' for a list of possible actions.
+
+> open washing machine
+Observaton: The washing machine is now open.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take skirt
+Observaton: The skirt is removed from the room. You put the skirt in your inventory.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put skirt in washing machine
+Observaton: The skirt is removed from the agent.
+The skirt is placed in the washing machine.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take jacket
+Observaton: The jacket is removed from the room. You put the jacket in your inventory.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put jacket in washing machine
+Observaton: The jacket is removed from the agent.
+The jacket is placed in the washing machine.
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take coat
+Observaton: The coat is removed from the room. You put the coat in your inventory.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put coat in washing machine
+Observaton: The coat is removed from the agent.
+The coat is placed in the washing machine.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take shirt
+Observaton: The shirt is removed from the room. You put the shirt in your inventory.
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put shirt in washing machine
+Observaton: The shirt is removed from the agent.
+The shirt is placed in the washing machine.
+
+Current step: 9
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use bottle of detergent on washing machine
+Observaton: You add some detergent into the washing machine.
+
+Current step: 10
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close washing machine
+Observaton: The washing machine is now closed.
+
+Current step: 11
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on washing machine
+Observaton: The washing machine is now turned on.
+
+Current step: 12
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> wait
+Observaton: You wait.
+
+Current step: 13
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open washing machine
+Observaton: The washing machine is now open.
+
+Current step: 14
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open dryer
+Observaton: The dryer is now open.
+
+Current step: 15
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take skirt
+Observaton: The skirt is removed from the washing machine. You put the skirt in your inventory.
+
+Current step: 16
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put skirt in dryer
+Observaton: The skirt is removed from the agent.
+The skirt is placed in the dryer.
+
+Current step: 17
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take jacket
+Observaton: The jacket is removed from the washing machine. You put the jacket in your inventory.
+
+Current step: 18
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put jacket in dryer
+Observaton: The jacket is removed from the agent.
+The jacket is placed in the dryer.
+
+Current step: 19
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take coat
+Observaton: The coat is removed from the washing machine. You put the coat in your inventory.
+
+Current step: 20
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put coat in dryer
+Observaton: The coat is removed from the agent.
+The coat is placed in the dryer.
+
+Current step: 21
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take shirt
+Observaton: The shirt is removed from the washing machine. You put the shirt in your inventory.
+
+Current step: 22
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put shirt in dryer
+Observaton: The shirt is removed from the agent.
+The shirt is placed in the dryer.
+
+Current step: 23
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close dryer
+Observaton: The dryer is now closed.
+
+Current step: 24
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on dryer
+Observaton: The dryer is now turned on.
+
+Current step: 25
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> wait
+Observaton: You wait.
+
+Current step: 26
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open dryer
+Observaton: The dryer is now open.
+
+Current step: 27
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take skirt
+Observaton: The skirt is removed from the dryer. You put the skirt in your inventory.
+
+Current step: 28
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put skirt in basket
+Observaton: The skirt is removed from the agent.
+The skirt is placed in the basket.
+
+Current step: 29
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take jacket
+Observaton: The jacket is removed from the dryer. You put the jacket in your inventory.
+
+Current step: 30
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put jacket in basket
+Observaton: The jacket is removed from the agent.
+The jacket is placed in the basket.
+
+Current step: 31
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take coat
+Observaton: The coat is removed from the dryer. You put the coat in your inventory.
+
+Current step: 32
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put coat in basket
+Observaton: The coat is removed from the agent.
+The coat is placed in the basket.
+
+Current step: 33
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take shirt
+Observaton: The shirt is removed from the dryer. You put the shirt in your inventory.
+
+Current step: 34
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put shirt in basket
+Observaton: The shirt is removed from the agent.
+The shirt is placed in the basket.
+
+Current step: 35
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take vest
+Observaton: The vest is removed from the room. You put the vest in your inventory.
+
+Current step: 36
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put vest in basket
+Observaton: The vest is removed from the agent.
+The vest is placed in the basket.
+
+Current step: 37
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take dress
+Observaton: The dress is removed from the room. You put the dress in your inventory.
+
+Current step: 38
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put dress in basket
+Observaton: The dress is removed from the agent.
+The dress is placed in the basket.
+
+Current step: 39
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take sweater
+Observaton: The sweater is removed from the room. You put the sweater in your inventory.
+
+Current step: 40
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put sweater in basket
+Observaton: The sweater is removed from the agent.
+The sweater is placed in the basket.
+
+Current step: 41
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True

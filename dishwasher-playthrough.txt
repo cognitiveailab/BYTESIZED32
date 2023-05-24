@@ -1,0 +1,460 @@
+(highlight) peter@neutronium:~/github/text-games-corpus$ /home/peter/anaconda3/envs/highlight/bin/python /home/peter/github/text-games-corpus/dishwasher.py
+Task Description: Your task is to wash the dirty dishes.
+
+Initial Observation: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently closed
+        a bottle of dish soap
+        a dirty cup that looks to have half-eaten pieces of peanut butter in it
+        a dirty plate that looks to have half-eaten pieces of orange on it
+        a dirty mug that looks to have half-eaten pieces of sandwhich in it
+        a clean knife
+        a clean glass
+        a clean bowl
+        a banana
+        a apple
+
+
+Type 'help' for a list of possible actions.
+
+> help
+Possible actions: dict_keys(['look around', 'look', 'inventory', 'eat yourself', 'eat dishwasher', 'eat bottle of dish soap', 'eat dirty cup', 'eat cup', 'eat dirty plate', 'eat plate', 'eat dirty mug', 'eat mug', 'eat clean knife', 'eat knife', 'eat clean glass', 'eat glass', 'eat clean bowl', 'eat bowl', 'eat banana', 'eat apple', 'take yourself', 'take yourself from kitchen', 'take dishwasher', 'take dishwasher from kitchen', 'take bottle of dish soap', 'take bottle of dish soap from kitchen', 'take dirty cup', 'take dirty cup from kitchen', 'take cup', 'take cup from kitchen', 'take dirty plate', 'take dirty plate from kitchen', 'take plate', 'take plate from kitchen', 'take dirty mug', 'take dirty mug from kitchen', 'take mug', 'take mug from kitchen', 'take clean knife', 'take clean knife from kitchen', 'take knife', 'take knife from kitchen', 'take clean glass', 'take clean glass from kitchen', 'take glass', 'take glass from kitchen', 'take clean bowl', 'take clean bowl from kitchen', 'take bowl', 'take bowl from kitchen', 'take banana', 'take banana from kitchen', 'take apple', 'take apple from kitchen', 'open yourself', 'close yourself', 'open dishwasher', 'close dishwasher', 'open bottle of dish soap', 'close bottle of dish soap', 'open dirty cup', 'close dirty cup', 'open cup', 'close cup', 'open dirty plate', 'close dirty plate', 'open plate', 'close plate', 'open dirty mug', 'close dirty mug', 'open mug', 'close mug', 'open clean knife', 'close clean knife', 'open knife', 'close knife', 'open clean glass', 'close clean glass', 'open glass', 'close glass', 'open clean bowl', 'close clean bowl', 'open bowl', 'close bowl', 'open banana', 'close banana', 'open apple', 'close apple', 'examine yourself', 'examine dishwasher', 'examine bottle of dish soap', 'examine dirty cup', 'examine cup', 'examine dirty plate', 'examine plate', 'examine dirty mug', 'examine mug', 'examine clean knife', 'examine knife', 'examine clean glass', 'examine glass', 'examine clean bowl', 'examine bowl', 'examine banana', 'examine apple', 'turn on yourself', 'turn off yourself', 'turn on dishwasher', 'turn off dishwasher', 'turn on bottle of dish soap', 'turn off bottle of dish soap', 'turn on dirty cup', 'turn off dirty cup', 'turn on cup', 'turn off cup', 'turn on dirty plate', 'turn off dirty plate', 'turn on plate', 'turn off plate', 'turn on dirty mug', 'turn off dirty mug', 'turn on mug', 'turn off mug', 'turn on clean knife', 'turn off clean knife', 'turn on knife', 'turn off knife', 'turn on clean glass', 'turn off clean glass', 'turn on glass', 'turn off glass', 'turn on clean bowl', 'turn off clean bowl', 'turn on bowl', 'turn off bowl', 'turn on banana', 'turn off banana', 'turn on apple', 'turn off apple', 'put yourself in dishwasher', 'put yourself in bottle of dish soap', 'put yourself in dirty cup', 'put yourself in cup', 'put yourself on dirty plate', 'put yourself on plate', 'put yourself in dirty mug', 'put yourself in mug', 'put yourself in clean knife', 'put yourself in knife', 'put yourself in clean glass', 'put yourself in glass', 'put yourself in clean bowl', 'put yourself in bowl', 'put yourself in banana', 'put yourself in apple', 'put dishwasher in yourself', 'put dishwasher in bottle of dish soap', 'put dishwasher in dirty cup', 'put dishwasher in cup', 'put dishwasher on dirty plate', 'put dishwasher on plate', 'put dishwasher in dirty mug', 'put dishwasher in mug', 'put dishwasher in clean knife', 'put dishwasher in knife', 'put dishwasher in clean glass', 'put dishwasher in glass', 'put dishwasher in clean bowl', 'put dishwasher in bowl', 'put dishwasher in banana', 'put dishwasher in apple', 'put bottle of dish soap in yourself', 'put bottle of dish soap in dishwasher', 'put bottle of dish soap in dirty cup', 'put bottle of dish soap in cup', 'put bottle of dish soap on dirty plate', 'put bottle of dish soap on plate', 'put bottle of dish soap in dirty mug', 'put bottle of dish soap in mug', 'put bottle of dish soap in clean knife', 'put bottle of dish soap in knife', 'put bottle of dish soap in clean glass', 'put bottle of dish soap in glass', 'put bottle of dish soap in clean bowl', 'put bottle of dish soap in bowl', 'put bottle of dish soap in banana', 'put bottle of dish soap in apple', 'put dirty cup in yourself', 'put dirty cup in dishwasher', 'put dirty cup in bottle of dish soap', 'put dirty cup on dirty plate', 'put dirty cup on plate', 'put dirty cup in dirty mug', 'put dirty cup in mug', 'put dirty cup in clean knife', 'put dirty cup in knife', 'put dirty cup in clean glass', 'put dirty cup in glass', 'put dirty cup in clean bowl', 'put dirty cup in bowl', 'put dirty cup in banana', 'put dirty cup in apple', 'put cup in yourself', 'put cup in dishwasher', 'put cup in bottle of dish soap', 'put cup on dirty plate', 'put cup on plate', 'put cup in dirty mug', 'put cup in mug', 'put cup in clean knife', 'put cup in knife', 'put cup in clean glass', 'put cup in glass', 'put cup in clean bowl', 'put cup in bowl', 'put cup in banana', 'put cup in apple', 'put dirty plate in yourself', 'put dirty plate in dishwasher', 'put dirty plate in bottle of dish soap', 'put dirty plate in dirty cup', 'put dirty plate in cup', 'put dirty plate in dirty mug', 'put dirty plate in mug', 'put dirty plate in clean knife', 'put dirty plate in knife', 'put dirty plate in clean glass', 'put dirty plate in glass', 'put dirty plate in clean bowl', 'put dirty plate in bowl', 'put dirty plate in banana', 'put dirty plate in apple', 'put plate in yourself', 'put plate in dishwasher', 'put plate in bottle of dish soap', 'put plate in dirty cup', 'put plate in cup', 'put plate in dirty mug', 'put plate in mug', 'put plate in clean knife', 'put plate in knife', 'put plate in clean glass', 'put plate in glass', 'put plate in clean bowl', 'put plate in bowl', 'put plate in banana', 'put plate in apple', 'put dirty mug in yourself', 'put dirty mug in dishwasher', 'put dirty mug in bottle of dish soap', 'put dirty mug in dirty cup', 'put dirty mug in cup', 'put dirty mug on dirty plate', 'put dirty mug on plate', 'put dirty mug in clean knife', 'put dirty mug in knife', 'put dirty mug in clean glass', 'put dirty mug in glass', 'put dirty mug in clean bowl', 'put dirty mug in bowl', 'put dirty mug in banana', 'put dirty mug in apple', 'put mug in yourself', 'put mug in dishwasher', 'put mug in bottle of dish soap', 'put mug in dirty cup', 'put mug in cup', 'put mug on dirty plate', 'put mug on plate', 'put mug in clean knife', 'put mug in knife', 'put mug in clean glass', 'put mug in glass', 'put mug in clean bowl', 'put mug in bowl', 'put mug in banana', 'put mug in apple', 'put clean knife in yourself', 'put clean knife in dishwasher', 'put clean knife in bottle of dish soap', 'put clean knife in dirty cup', 'put clean knife in cup', 'put clean knife on dirty plate', 'put clean knife on plate', 'put clean knife in dirty mug', 'put clean knife in mug', 'put clean knife in clean glass', 'put clean knife in glass', 'put clean knife in clean bowl', 'put clean knife in bowl', 'put clean knife in banana', 'put clean knife in apple', 'put knife in yourself', 'put knife in dishwasher', 'put knife in bottle of dish soap', 'put knife in dirty cup', 'put knife in cup', 'put knife on dirty plate', 'put knife on plate', 'put knife in dirty mug', 'put knife in mug', 'put knife in clean glass', 'put knife in glass', 'put knife in clean bowl', 'put knife in bowl', 'put knife in banana', 'put knife in apple', 'put clean glass in yourself', 'put clean glass in dishwasher', 'put clean glass in bottle of dish soap', 'put clean glass in dirty cup', 'put clean glass in cup', 'put clean glass on dirty plate', 'put clean glass on plate', 'put clean glass in dirty mug', 'put clean glass in mug', 'put clean glass in clean knife', 'put clean glass in knife', 'put clean glass in clean bowl', 'put clean glass in bowl', 'put clean glass in banana', 'put clean glass in apple', 'put glass in yourself', 'put glass in dishwasher', 'put glass in bottle of dish soap', 'put glass in dirty cup', 'put glass in cup', 'put glass on dirty plate', 'put glass on plate', 'put glass in dirty mug', 'put glass in mug', 'put glass in clean knife', 'put glass in knife', 'put glass in clean bowl', 'put glass in bowl', 'put glass in banana', 'put glass in apple', 'put clean bowl in yourself', 'put clean bowl in dishwasher', 'put clean bowl in bottle of dish soap', 'put clean bowl in dirty cup', 'put clean bowl in cup', 'put clean bowl on dirty plate', 'put clean bowl on plate', 'put clean bowl in dirty mug', 'put clean bowl in mug', 'put clean bowl in clean knife', 'put clean bowl in knife', 'put clean bowl in clean glass', 'put clean bowl in glass', 'put clean bowl in banana', 'put clean bowl in apple', 'put bowl in yourself', 'put bowl in dishwasher', 'put bowl in bottle of dish soap', 'put bowl in dirty cup', 'put bowl in cup', 'put bowl on dirty plate', 'put bowl on plate', 'put bowl in dirty mug', 'put bowl in mug', 'put bowl in clean knife', 'put bowl in knife', 'put bowl in clean glass', 'put bowl in glass', 'put bowl in banana', 'put bowl in apple', 'put banana in yourself', 'put banana in dishwasher', 'put banana in bottle of dish soap', 'put banana in dirty cup', 'put banana in cup', 'put banana on dirty plate', 'put banana on plate', 'put banana in dirty mug', 'put banana in mug', 'put banana in clean knife', 'put banana in knife', 'put banana in clean glass', 'put banana in glass', 'put banana in clean bowl', 'put banana in bowl', 'put banana in apple', 'put apple in yourself', 'put apple in dishwasher', 'put apple in bottle of dish soap', 'put apple in dirty cup', 'put apple in cup', 'put apple on dirty plate', 'put apple on plate', 'put apple in dirty mug', 'put apple in mug', 'put apple in clean knife', 'put apple in knife', 'put apple in clean glass', 'put apple in glass', 'put apple in clean bowl', 'put apple in bowl', 'put apple in banana', 'use yourself on dishwasher', 'use yourself on bottle of dish soap', 'use yourself on dirty cup', 'use yourself on cup', 'use yourself on dirty plate', 'use yourself on plate', 'use yourself on dirty mug', 'use yourself on mug', 'use yourself on clean knife', 'use yourself on knife', 'use yourself on clean glass', 'use yourself on glass', 'use yourself on clean bowl', 'use yourself on bowl', 'use yourself on banana', 'use yourself on apple', 'use dishwasher on yourself', 'use dishwasher on bottle of dish soap', 'use dishwasher on dirty cup', 'use dishwasher on cup', 'use dishwasher on dirty plate', 'use dishwasher on plate', 'use dishwasher on dirty mug', 'use dishwasher on mug', 'use dishwasher on clean knife', 'use dishwasher on knife', 'use dishwasher on clean glass', 'use dishwasher on glass', 'use dishwasher on clean bowl', 'use dishwasher on bowl', 'use dishwasher on banana', 'use dishwasher on apple', 'use bottle of dish soap on yourself', 'use bottle of dish soap on dishwasher', 'use bottle of dish soap on dirty cup', 'use bottle of dish soap on cup', 'use bottle of dish soap on dirty plate', 'use bottle of dish soap on plate', 'use bottle of dish soap on dirty mug', 'use bottle of dish soap on mug', 'use bottle of dish soap on clean knife', 'use bottle of dish soap on knife', 'use bottle of dish soap on clean glass', 'use bottle of dish soap on glass', 'use bottle of dish soap on clean bowl', 'use bottle of dish soap on bowl', 'use bottle of dish soap on banana', 'use bottle of dish soap on apple', 'use dirty cup on yourself', 'use dirty cup on dishwasher', 'use dirty cup on bottle of dish soap', 'use dirty cup on dirty plate', 'use dirty cup on plate', 'use dirty cup on dirty mug', 'use dirty cup on mug', 'use dirty cup on clean knife', 'use dirty cup on knife', 'use dirty cup on clean glass', 'use dirty cup on glass', 'use dirty cup on clean bowl', 'use dirty cup on bowl', 'use dirty cup on banana', 'use dirty cup on apple', 'use cup on yourself', 'use cup on dishwasher', 'use cup on bottle of dish soap', 'use cup on dirty plate', 'use cup on plate', 'use cup on dirty mug', 'use cup on mug', 'use cup on clean knife', 'use cup on knife', 'use cup on clean glass', 'use cup on glass', 'use cup on clean bowl', 'use cup on bowl', 'use cup on banana', 'use cup on apple', 'use dirty plate on yourself', 'use dirty plate on dishwasher', 'use dirty plate on bottle of dish soap', 'use dirty plate on dirty cup', 'use dirty plate on cup', 'use dirty plate on dirty mug', 'use dirty plate on mug', 'use dirty plate on clean knife', 'use dirty plate on knife', 'use dirty plate on clean glass', 'use dirty plate on glass', 'use dirty plate on clean bowl', 'use dirty plate on bowl', 'use dirty plate on banana', 'use dirty plate on apple', 'use plate on yourself', 'use plate on dishwasher', 'use plate on bottle of dish soap', 'use plate on dirty cup', 'use plate on cup', 'use plate on dirty mug', 'use plate on mug', 'use plate on clean knife', 'use plate on knife', 'use plate on clean glass', 'use plate on glass', 'use plate on clean bowl', 'use plate on bowl', 'use plate on banana', 'use plate on apple', 'use dirty mug on yourself', 'use dirty mug on dishwasher', 'use dirty mug on bottle of dish soap', 'use dirty mug on dirty cup', 'use dirty mug on cup', 'use dirty mug on dirty plate', 'use dirty mug on plate', 'use dirty mug on clean knife', 'use dirty mug on knife', 'use dirty mug on clean glass', 'use dirty mug on glass', 'use dirty mug on clean bowl', 'use dirty mug on bowl', 'use dirty mug on banana', 'use dirty mug on apple', 'use mug on yourself', 'use mug on dishwasher', 'use mug on bottle of dish soap', 'use mug on dirty cup', 'use mug on cup', 'use mug on dirty plate', 'use mug on plate', 'use mug on clean knife', 'use mug on knife', 'use mug on clean glass', 'use mug on glass', 'use mug on clean bowl', 'use mug on bowl', 'use mug on banana', 'use mug on apple', 'use clean knife on yourself', 'use clean knife on dishwasher', 'use clean knife on bottle of dish soap', 'use clean knife on dirty cup', 'use clean knife on cup', 'use clean knife on dirty plate', 'use clean knife on plate', 'use clean knife on dirty mug', 'use clean knife on mug', 'use clean knife on clean glass', 'use clean knife on glass', 'use clean knife on clean bowl', 'use clean knife on bowl', 'use clean knife on banana', 'use clean knife on apple', 'use knife on yourself', 'use knife on dishwasher', 'use knife on bottle of dish soap', 'use knife on dirty cup', 'use knife on cup', 'use knife on dirty plate', 'use knife on plate', 'use knife on dirty mug', 'use knife on mug', 'use knife on clean glass', 'use knife on glass', 'use knife on clean bowl', 'use knife on bowl', 'use knife on banana', 'use knife on apple', 'use clean glass on yourself', 'use clean glass on dishwasher', 'use clean glass on bottle of dish soap', 'use clean glass on dirty cup', 'use clean glass on cup', 'use clean glass on dirty plate', 'use clean glass on plate', 'use clean glass on dirty mug', 'use clean glass on mug', 'use clean glass on clean knife', 'use clean glass on knife', 'use clean glass on clean bowl', 'use clean glass on bowl', 'use clean glass on banana', 'use clean glass on apple', 'use glass on yourself', 'use glass on dishwasher', 'use glass on bottle of dish soap', 'use glass on dirty cup', 'use glass on cup', 'use glass on dirty plate', 'use glass on plate', 'use glass on dirty mug', 'use glass on mug', 'use glass on clean knife', 'use glass on knife', 'use glass on clean bowl', 'use glass on bowl', 'use glass on banana', 'use glass on apple', 'use clean bowl on yourself', 'use clean bowl on dishwasher', 'use clean bowl on bottle of dish soap', 'use clean bowl on dirty cup', 'use clean bowl on cup', 'use clean bowl on dirty plate', 'use clean bowl on plate', 'use clean bowl on dirty mug', 'use clean bowl on mug', 'use clean bowl on clean knife', 'use clean bowl on knife', 'use clean bowl on clean glass', 'use clean bowl on glass', 'use clean bowl on banana', 'use clean bowl on apple', 'use bowl on yourself', 'use bowl on dishwasher', 'use bowl on bottle of dish soap', 'use bowl on dirty cup', 'use bowl on cup', 'use bowl on dirty plate', 'use bowl on plate', 'use bowl on dirty mug', 'use bowl on mug', 'use bowl on clean knife', 'use bowl on knife', 'use bowl on clean glass', 'use bowl on glass', 'use bowl on banana', 'use bowl on apple', 'use banana on yourself', 'use banana on dishwasher', 'use banana on bottle of dish soap', 'use banana on dirty cup', 'use banana on cup', 'use banana on dirty plate', 'use banana on plate', 'use banana on dirty mug', 'use banana on mug', 'use banana on clean knife', 'use banana on knife', 'use banana on clean glass', 'use banana on glass', 'use banana on clean bowl', 'use banana on bowl', 'use banana on apple', 'use apple on yourself', 'use apple on dishwasher', 'use apple on bottle of dish soap', 'use apple on dirty cup', 'use apple on cup', 'use apple on dirty plate', 'use apple on plate', 'use apple on dirty mug', 'use apple on mug', 'use apple on clean knife', 'use apple on knife', 'use apple on clean glass', 'use apple on glass', 'use apple on clean bowl', 'use apple on bowl', 'use apple on banana'])
+
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently closed
+        a bottle of dish soap
+        a dirty cup that looks to have half-eaten pieces of peanut butter in it
+        a dirty plate that looks to have half-eaten pieces of orange on it
+        a dirty mug that looks to have half-eaten pieces of sandwhich in it
+        a clean knife
+        a clean glass
+        a clean bowl
+        a banana
+        a apple
+
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take cup
+Observaton: The dirty cup is removed from the kitchen. You put the dirty cup in your inventory.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take plate
+Observaton: The dirty plate is removed from the kitchen. You put the dirty plate in your inventory.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take mug
+Observaton: The dirty mug is removed from the kitchen. You put the dirty mug in your inventory.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently closed
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a clean bowl
+        a banana
+        a apple
+
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> eat apple
+Observaton: You don't currently have the apple in your inventory.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take apple
+Observaton: The apple is removed from the kitchen. You put the apple in your inventory.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> eat apple
+Observaton: You eat the apple using the bowl.
+
+Current step: 8
+Score: -1
+Reward: -1
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently closed
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+        a dirty bowl that looks to have half-eaten pieces of apple in it
+
+
+Current step: 9
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take bowl
+Observaton: The dirty bowl is removed from the kitchen. You put the dirty bowl in your inventory.
+
+Current step: 10
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> inventory
+Observaton: You have the following items in your inventory:
+        a dirty cup that looks to have half-eaten pieces of peanut butter in it
+        a dirty plate that looks to have half-eaten pieces of orange on it
+        a dirty mug that looks to have half-eaten pieces of sandwhich in it
+        a dirty bowl that looks to have half-eaten pieces of apple in it
+
+
+Current step: 11
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put cup in dishwasher
+Observaton: The dishwasher is closed, so things can't be placed there.
+
+Current step: 12
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open dishwasher
+Observaton: The dishwasher is now open.
+
+Current step: 13
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put cup in dishwasher
+Observaton: The dirty cup is removed from the agent.
+The dirty cup is placed in the dishwasher.
+
+Current step: 14
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put plate in dishwasher
+Observaton: The dirty plate is removed from the agent.
+The dirty plate is placed in the dishwasher.
+
+Current step: 15
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put mug in dishwasher
+Observaton: The dirty mug is removed from the agent.
+The dirty mug is placed in the dishwasher.
+
+Current step: 16
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put bowl in dishwasher
+Observaton: The dirty bowl is removed from the agent.
+The dirty bowl is placed in the dishwasher.
+
+Current step: 17
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently open and contains one or more items.
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+
+
+Current step: 18
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on dishwasher
+Observaton: The dishwasher is opened, so it can't be turned on.
+
+Current step: 19
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close dishwasher
+Observaton: The dishwasher is now closed.
+
+Current step: 20
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on dishwasher
+Observaton: The dishwasher is now turned on.
+
+Current step: 21
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently on
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+
+
+Current step: 22
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently on
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+
+
+Current step: 23
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher with a blinking green light that is currently closed
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+
+
+Current step: 24
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open dishwasher
+Observaton: The dishwasher is now open.
+
+Current step: 25
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently open and contains one or more items.
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+
+
+Current step: 26
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> examine dishwasher
+Observaton: a dishwasher that is currently open and contains the following items: 
+        a dirty cup that looks to have half-eaten pieces of peanut butter in it
+        a dirty plate that looks to have half-eaten pieces of orange on it
+        a dirty mug that looks to have half-eaten pieces of sandwhich in it
+        a dirty bowl that looks to have half-eaten pieces of apple in it
+
+
+Current step: 27
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use bottle of dish soap on dishwasher
+Observaton: You squirt some dish soap into the dishwasher.
+
+Current step: 28
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> examine dishwasher
+Observaton: a dishwasher that is currently open and contains the following items: 
+        a dirty cup that looks to have half-eaten pieces of peanut butter in it
+        a dirty plate that looks to have half-eaten pieces of orange on it
+        a dirty mug that looks to have half-eaten pieces of sandwhich in it
+        a dirty bowl that looks to have half-eaten pieces of apple in it
+        a squirt of dish soap
+
+
+Current step: 29
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on dishwasher
+Observaton: The dishwasher is opened, so it can't be turned on.
+
+Current step: 30
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close dishwasher
+Observaton: The dishwasher is now closed.
+
+Current step: 31
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently closed
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+
+
+Current step: 32
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on dishwasher
+Observaton: The dishwasher is now turned on.
+
+Current step: 33
+Score: -1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a dishwasher that is currently on
+        a bottle of dish soap
+        a clean knife
+        a clean glass
+        a banana
+
+
+Current step: 34
+Score: 3
+Reward: 4
+Game Over: True
+Game Won: True
+
+----------------------------------------

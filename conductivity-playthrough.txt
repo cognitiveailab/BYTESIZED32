@@ -1,0 +1,118 @@
+Task Description: Your task is to figure out if the fork is conductive or not. If the fork is conductive, put it in the red box. Otherwise, put it in the black box.
+
+Initial Observation: You find yourself in a room.  In the room, you see:
+	yourself
+	a light bulb which is off
+	a red wire
+	a black wire
+	a blue wire
+	a battery
+	a fork
+	the red box
+	the black box
+
+
+Type 'help' for a list of possible actions.
+
+> connect light bulb terminal1 to red wire terminal1
+Observaton: Successfully connect light bulb terminal1 to red wire terminal1
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect red wire terminal2 to battery anode
+Observaton: Successfully connect red wire terminal2 to battery anode
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect battery cathode to black wire terminal1
+Observaton: Successfully connect battery cathode to black wire terminal1
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect black wire terminal2 to fork terminal1
+Observaton: Successfully connect black wire terminal2 to fork terminal1
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect fork terminal2 to blue wire terminal1
+Observaton: Successfully connect fork terminal2 to blue wire terminal1
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect blue wire terminal2 to light bulb terminal2
+Observaton: Successfully connect blue wire terminal2 to light bulb terminal2
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a room.  In the room, you see:
+	yourself
+	a light bulb which is on and connects to red wire terminal1 and blue wire terminal2
+	a red wire connecting to light bulb terminal1 and battery anode
+	a black wire connecting to battery cathode and fork terminal1
+	a blue wire connecting to fork terminal2 and light bulb terminal2
+	a battery connecting to black wire terminal1 and red wire terminal2
+	a fork connecting to black wire terminal2 and blue wire terminal1
+	the red box
+	the black box
+
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take fork
+Observaton: The fork is removed from the room. You put the fork in your inventory.
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put fork in red box
+Observaton: The fork is removed from the agent.
+The fork is placed in the red box.
+
+Current step: 9
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

@@ -1,0 +1,240 @@
+(base) peter@titan:~/github/text-games-corpus$ /bin/python3 /home/peter/github/text-games-corpus/make-ice-cubes.py
+Task Description: Your task is to make ice cubes.
+
+Initial Observation: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a freezer that is currently closed
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+Type 'help' for a list of possible actions.
+
+> open freezer
+Observaton: The freezer is now open.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> examine freezer
+Observaton: a freezer that is currently open and contains the following items: 
+        an ice cube cray that is empty
+
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take ice cube tray
+Observaton: The ice cube tray is removed from the freezer. You put the ice cube tray in your inventory.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put ice cube tray in sink
+Observaton: The ice cube tray is removed from the agent.
+The ice cube tray is placed in the sink.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a freezer that is currently open and empty
+        a sink that is currently off and that contains one or more items.
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> examine sink
+Observaton: a sink that is currently off and that contains the following items: 
+        an ice cube cray that is empty
+
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on sink
+Observaton: The sink is now turned on.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> examine sink
+Observaton: a sink that is currently on and that contains the following items: 
+        an ice cube cray that looks to have some water in it
+
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn off sink
+Observaton: The sink is now turned off.
+
+Current step: 9
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take ice cube tray
+Observaton: The ice cube tray is removed from the sink. You put the ice cube tray in your inventory.
+
+Current step: 10
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a freezer that is currently open and empty
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+Current step: 11
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put ice cube tray in freezer
+Observaton: The ice cube tray is removed from the agent.
+The ice cube tray is placed in the freezer.
+
+Current step: 12
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close freezer
+Observaton: The freezer is now closed.
+
+Current step: 13
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a freezer that is currently closed
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+Current step: 14
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a freezer that is currently closed
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+Current step: 15
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a freezer that is currently closed
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+Current step: 16
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> open freezer
+Observaton: The freezer is now open.
+
+Current step: 17
+Score: 1
+Reward: 0
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> examine freezer
+Observaton: a freezer that is currently open and contains the following items: 
+        an ice cube cray that looks to have some ice in it
+
+
+Current step: 18
+Score: 1
+Reward: 0
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> 

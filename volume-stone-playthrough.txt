@@ -1,0 +1,114 @@
+Task Description: Your task is to figure out the volume of the stone.
+
+Initial Observation: You are in a room.  In the room, you see:
+	yourself
+	a sink that is currently off and that is empty
+	a stone
+	a measuring cup that is empty
+
+
+Type 'help' for a list of possible actions.
+
+> take measuring cup
+Observaton:  You put the measuring cup in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put measuring cup in sink
+Observaton:
+The measuring cup is placed in the sink.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on sink
+Observaton: The sink is now turned on.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn off sink
+Observaton: The sink is now turned off.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take measuring cup
+Observaton:  You put the measuring cup in your inventory.
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> examine measuring cup
+Observaton: a measuring cup which reads 500 mL. In it, you see water.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take stone
+Observaton:  You put the stone in your inventory.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put stone in measuring cup
+Observaton:
+The stone is placed in the measuring cup.
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> examine measuring cup
+Observaton: a measuring cup which reads 849 mL. In it, you see water, a stone.
+
+Current step: 9
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> answer 349
+Observaton: You believe the volume of the stone is 349 cm^3.
+
+Current step: 10
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

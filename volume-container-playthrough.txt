@@ -1,0 +1,95 @@
+Task Description: Your task is to figure out the volume of the glass.
+
+Initial Observation: You are in a room.  In the room, you see:
+	yourself
+	a sink that is currently off and that is empty
+	a mug that is empty
+	a glass that is empty
+	a cup that is empty
+	a bowl that is empty
+	a bottle that is empty
+	a graduated cylinder that is empty
+
+
+Type 'help' for a list of possible actions.
+
+> take glass
+Observaton:  You put the glass in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put glass in sink
+Observaton:
+The glass is placed in the sink.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on sink
+Observaton: The sink is now turned on.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take glass
+Observaton:  You put the glass in your inventory.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> pour water in glass into graduated cylinder
+Observaton: You pour water in graduated cylinder into graduated cylinder
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You are in a room.  In the room, you see:
+	yourself
+	a sink that is currently on and that is empty
+	a mug that is empty
+	a cup that is empty
+	a bowl that is empty
+	a bottle that is empty
+	a graduated cylinder containing 167 mL water
+
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> answer 167 mL
+Observaton: You believe the volume of the glass is 167 mL.
+
+Current step: 7
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

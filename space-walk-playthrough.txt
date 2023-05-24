@@ -1,0 +1,87 @@
+Task Description: Your task is to conduct a space walk.
+
+Initial Observation: You find yourself in a spaceship.  In the spaceship, you see:
+	yourself
+	a space suit
+You also see:
+	 a door to the airlock that is closed
+
+
+Type 'help' for a list of possible actions.
+
+> put on space suit
+Observaton: The space suit is removed from the spaceship. You put on the space suit.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open door to airlock
+Observaton: You open the door to the airlock.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> move to airlock
+Observaton: You move from spaceship to airlock.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a airlock.  In the airlock, you see:
+	yourself
+You also see:
+	 a door to the spaceship that is open
+	 a door to the outer space that is closed
+
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close door to spaceship
+Observaton: You close the door to the spaceship.
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open door to outer space
+Observaton: You open the door to the outer space.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> move to outer space
+Observaton: You move from airlock to outer space.
+
+Current step: 7
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

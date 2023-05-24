@@ -1,0 +1,72 @@
+Task Description: Your task is to use chemistry to create black paint.
+
+Initial Observation: You find yourself in an art studio.  In the art studio, you see:
+	yourself
+	a cup 0 containing blue paint
+	a cup 1 containing red paint
+	a cup 2 containing yellow paint
+
+
+Type 'help' for a list of possible actions.
+
+> pour blue paint in cup 1
+Observaton: You pour blue paint in cup 1
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in an art studio.  In the art studio, you see:
+	yourself
+	a cup 0 that is empty
+	a cup 1 containing red paint, and blue paint
+	a cup 2 containing yellow paint
+
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> pour yellow paint in cup 1
+Observaton: You pour yellow paint in cup 1
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in an art studio.  In the art studio, you see:
+	yourself
+	a cup 0 that is empty
+	a cup 1 containing red paint, blue paint, and yellow paint
+	a cup 2 that is empty
+
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> mix cup 1
+Observaton: The paints mix to produce black paint.
+
+Current step: 5
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

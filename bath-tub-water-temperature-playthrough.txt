@@ -1,0 +1,74 @@
+Task Description: Your task is to make the temperature of the water in the bath tub to 35 - 40 Celsius degree by adding water from the taps. When you are done, take the action "bath".
+
+Initial Observation: You find yourself in a bathroom.  In the kitchen, you see:
+	yourself
+	a bath tub that contains the following items:
+		water
+		a hot tap, which is currently off.
+		a cold tap, which is currently off.
+	a thermometer
+
+
+Type 'help' for a list of possible actions.
+
+> take thermometer
+Observaton: The thermometer is removed from the bathroom. You put the thermometer in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use thermometer on water
+Observaton: The thermometer reads 44 Celsius degree.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on cold tap
+Observaton: The cold tap is now turned on.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn off cold tap
+Observaton: The cold tap is now turned off.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use thermometer on water
+Observaton: The thermometer reads 39 Celsius degree.
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> bath
+Observaton:
+
+Current step: 6
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

@@ -1,0 +1,65 @@
+Task Description: Your task is to figure out the volume of the green box.
+
+Initial Observation: You find yourself in a room. In the room, you see:
+	yourself
+	a green box
+	a white box
+	a orange box
+	a black box
+	a brown box
+	a ruler
+
+
+Type 'help' for a list of possible actions.
+
+> take ruler
+Observaton: The ruler is removed from the room. You put the ruler in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> measure the length of the green box with the ruler
+Observaton: The length of the green box is 40 cm
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> measure the width of the green box with the ruler
+Observaton: The width of the green box is 40 cm
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> measure the height of the green box with the ruler
+Observaton: The height of the green box is 10 cm
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> answer 16000 cubic cm
+Observaton: You believe the volume of the green box is 16000 cubic cm.
+
+Current step: 5
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

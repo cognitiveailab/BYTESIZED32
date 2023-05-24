@@ -1,0 +1,54 @@
+Task Description: Your task is to lit the light bulb.
+
+Initial Observation: You find yourself in a room.  In the room, you see:
+	yourself
+	a light bulb which is off
+	a red wire
+	a black wire
+	a blue wire
+	a battery
+
+
+Type 'help' for a list of possible actions.
+
+> connect light bulb terminal1 to red wire terminal1
+Observaton: Successfully connect light bulb terminal1 to red wire terminal1
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect red wire terminal2 to battery anode
+Observaton: Successfully connect red wire terminal2 to battery anode
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect battery cathode to black wire terminal1
+Observaton: Successfully connect battery cathode to black wire terminal1
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> connect black wire terminal2 to light bulb terminal2
+Observaton: Successfully connect black wire terminal2 to light bulb terminal2
+
+Current step: 4
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

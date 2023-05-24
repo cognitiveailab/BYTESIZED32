@@ -1,0 +1,137 @@
+Task Description: Your task is to put all heaviest cubes into the box.
+
+Initial Observation: You find yourself in a room.  In the room, you see:
+	yourself
+	a balance scale with two plates. The scale is in balance. The left plate is empty. The right plate is empty.
+	a white cube
+	a blue cube
+	a yellow cube
+	the box
+
+
+Type 'help' for a list of possible actions.
+
+> take white cube
+Observaton: The white cube is removed from the room. You put the white cube in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put white cube in left side of the balance scale
+Observaton: The white cube is removed from the agent.
+The white cube is placed in the left side of the balance scale.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take blue cube
+Observaton: The blue cube is removed from the room. You put the blue cube in your inventory.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put blue cube in right side of the balance scale
+Observaton: The blue cube is removed from the agent.
+The blue cube is placed in the right side of the balance scale.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a room.  In the room, you see:
+	yourself
+	a balance scale with two plates. The left side of the scale is higher than the right side. The left plate contains a white cube. The right plate contains a blue cube.
+	a yellow cube
+	the box
+
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take white cube
+Observaton: The white cube is removed from the left side of the balance scale. You put the white cube in your inventory.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take yellow cube
+Observaton: The yellow cube is removed from the room. You put the yellow cube in your inventory.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put yellow cube in left side of the balance scale
+Observaton: The yellow cube is removed from the agent.
+The yellow cube is placed in the left side of the balance scale.
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a room.  In the room, you see:
+	yourself
+	a balance scale with two plates. The left side of the scale is higher than the right side. The left plate contains a yellow cube. The right plate contains a blue cube.
+	the box
+
+
+Current step: 9
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take blue cube
+Observaton: The blue cube is removed from the right side of the balance scale. You put the blue cube in your inventory.
+
+Current step: 10
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put blue cube in box
+Observaton: The blue cube is removed from the agent.
+The blue cube is placed in the box.
+
+Current step: 11
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

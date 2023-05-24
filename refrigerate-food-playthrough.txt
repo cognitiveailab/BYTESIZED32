@@ -1,0 +1,481 @@
+(base) peter@titan:~/github/text-games-corpus$ /bin/python3 /home/peter/github/text-games-corpus/refrigerate-food.py
+Task Description: Your task is to prevent the foods from spoiling.
+
+Initial Observation: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of soy milk, and a bottle of orange juice on it
+
+
+Type 'help' for a list of possible actions.
+
+> help
+Possible actions: dict_keys(['look around', 'look', 'inventory', 'eat yourself', 'eat fridge', 'eat counter', 'eat soy milk', 'eat orange juice', 'take yourself', 'take yourself from kitchen', 'take fridge', 'take fridge from kitchen', 'take counter', 'take counter from kitchen', 'take soy milk', 'take soy milk from counter', 'take orange juice', 'take orange juice from counter', 'open yourself', 'close yourself', 'open fridge', 'close fridge', 'open counter', 'close counter', 'open soy milk', 'close soy milk', 'open orange juice', 'close orange juice', 'examine yourself', 'examine fridge', 'examine counter', 'examine soy milk', 'examine orange juice', 'turn on yourself', 'turn off yourself', 'turn on fridge', 'turn off fridge', 'turn on counter', 'turn off counter', 'turn on soy milk', 'turn off soy milk', 'turn on orange juice', 'turn off orange juice', 'put yourself in fridge', 'put yourself on counter', 'put yourself in soy milk', 'put yourself in orange juice', 'put fridge in yourself', 'put fridge on counter', 'put fridge in soy milk', 'put fridge in orange juice', 'put counter in yourself', 'put counter in fridge', 'put counter in soy milk', 'put counter in orange juice', 'put soy milk in yourself', 'put soy milk in fridge', 'put soy milk on counter', 'put soy milk in orange juice', 'put orange juice in yourself', 'put orange juice in fridge', 'put orange juice on counter', 'put orange juice in soy milk', 'use yourself on fridge', 'use yourself on counter', 'use yourself on soy milk', 'use yourself on orange juice', 'use fridge on yourself', 'use fridge on counter', 'use fridge on soy milk', 'use fridge on orange juice', 'use counter on yourself', 'use counter on fridge', 'use counter on soy milk', 'use counter on orange juice', 'use soy milk on yourself', 'use soy milk on fridge', 'use soy milk on counter', 'use soy milk on orange juice', 'use orange juice on yourself', 'use orange juice on fridge', 'use orange juice on counter', 'use orange juice on soy milk'])
+
+> take soy milk
+Observaton: The soy milk is removed from the counter. You put the soy milk in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take orange juice
+Observaton: The orange juice is removed from the counter. You put the orange juice in your inventory.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that is empty
+
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open fridge
+Observaton: The fridge is now open.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently open that is empty
+        a counter that is empty
+
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put soy milk in fridge
+Observaton: The soy milk is removed from the agent.
+The soy milk is placed in the fridge.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put orange juice in fridge
+Observaton: The orange juice is removed from the agent.
+The orange juice is placed in the fridge.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close fridge
+Observaton: The fridge is now closed.
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that is empty
+
+
+Current step: 9
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that is empty
+
+
+Current step: 10
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that is empty
+
+
+Current step: 11
+Score: 2
+Reward: 2
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that is empty
+
+
+Current step: 12
+Score: 2
+Reward: 0
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that is empty
+
+
+Current step: 13
+Score: 2
+Reward: 0
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> exit
+(base) peter@titan:~/github/text-games-corpus$ 
+(base) peter@titan:~/github/text-games-corpus$ /bin/python3 /home/peter/github/text-games-corpus/refrigerate-food.py
+Task Description: Your task is to prevent the foods from spoiling.
+
+Initial Observation: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of soy milk, and a bottle of orange juice on it
+
+
+Type 'help' for a list of possible actions.
+
+> open fridge
+Observaton: The fridge is now open.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take soy milk
+Observaton: The soy milk is removed from the counter. You put the soy milk in your inventory.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put soy milk in fridge
+Observaton: The soy milk is removed from the agent.
+The soy milk is placed in the fridge.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> close fridge
+Observaton: The fridge is now closed.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 7
+Score: 1
+Reward: 1
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 8
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 9
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 10
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 11
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 12
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 13
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 14
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 15
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 16
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 17
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 18
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 19
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 20
+Score: 1
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of orange juice on it
+
+
+Current step: 21
+Score: 0
+Reward: -1
+Game Over: True
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+        yourself
+        a fridge that is currently closed
+        a counter that looks to have a bottle of spoiled orange juice on it
+
+
+Current step: 22
+Score: 0
+Reward: 0
+Game Over: True
+Game Won: False
+
+----------------------------------------
+> exit

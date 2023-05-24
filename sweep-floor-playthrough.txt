@@ -1,0 +1,108 @@
+Task Description: Your task is to clean the garbage on the ground to the garbage can.
+
+Initial Observation: You find yourself in a room.  In the room, you see:
+	yourself
+	a(n) broom
+	an empty dustpan
+	an empty garbage can
+	watermelon rind on the ground
+	dust on the ground
+	waste paper on the ground
+	broken glass on the ground
+	dog hair on the ground
+	a(n) mop
+
+
+Type 'help' for a list of possible actions.
+
+> take broom
+Observaton: The broom is removed from the room. You put the broom in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take dustpan
+Observaton: The dustpan is removed from the room. You put the dustpan in your inventory.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> sweep watermelon rind to dustpan with broom
+Observaton: You sweep watermelon rind to dustpan.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> sweep dust to dustpan with broom
+Observaton: You sweep dust to dustpan.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> sweep waste paper to dustpan with broom
+Observaton: You sweep waste paper to dustpan.
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> sweep broken glass to dustpan with broom
+Observaton: You sweep broken glass to dustpan.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> sweep dog hair to dustpan with broom
+Observaton: You sweep dog hair to dustpan.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> open garbage can
+Observaton: The garbage can is now open.
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> dump dustpan to garbage can
+Observaton: You emptied the dustpan to the garbage can.
+
+Current step: 9
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

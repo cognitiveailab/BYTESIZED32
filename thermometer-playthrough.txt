@@ -1,0 +1,46 @@
+Task Description: Your task is to figure out the temperature of the water in the pot.
+
+Initial Observation: You find yourself in a kitchen. In the kitchen, you see:
+	yourself
+	a pot that has water in it
+	a thermometer
+	a bowl that has orange juice in it
+	a cup that has milk in it
+	a glass that has olive oil in it
+	a bottle that has soy sauce in it
+	a mug that has vinegar in it
+
+
+Type 'help' for a list of possible actions.
+
+> take thermometer
+Observaton: The thermometer is removed from the kitchen. You put the thermometer in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use thermometer on water
+Observaton: The thermometer reads 76 Celsius degree.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> answer 76 Celsius degree
+Observaton: You believe the temperature of the water is 76 Celsius degree.
+
+Current step: 3
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

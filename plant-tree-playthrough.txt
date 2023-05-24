@@ -1,0 +1,119 @@
+Task Description: Your task is to plant the tree and water it
+
+Initial Observation: You are in the garden.  In the garden, you see:
+	yourself
+	a shovel
+	a hammer
+	a screwer
+	a sink that is currently off and that is empty
+	a bucket that is empty
+	a jug that is empty
+	a tree
+
+
+Type 'help' for a list of possible actions.
+
+> take shovel
+Observaton:  You put the shovel in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> dig with shovel
+Observaton: You dig a hole on the ground. You get some soil.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take tree
+Observaton:  You put the tree in your inventory.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put tree in hole
+Observaton:
+The tree is placed in the hole.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put soil in hole
+Observaton:
+The soil is placed in the hole.
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take jug
+Observaton:  You put the jug in your inventory.
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put jug in sink
+Observaton:
+The jug is placed in the sink.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> turn on sink
+Observaton: The sink is now turned on.
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take jug
+Observaton:  You put the jug in your inventory.
+
+Current step: 9
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> pour water in jug into soil
+Observaton: You pour water into soil
+
+Current step: 10
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

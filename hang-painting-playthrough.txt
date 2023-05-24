@@ -1,0 +1,70 @@
+Task Description: Your task is to hang the picture of a girl on the back wall.
+
+Initial Observation: You find yourself in a living room.  In the living room, you see:
+	yourself
+	a left wall
+	a right wall
+	a front wall
+	a back wall
+	a hammer
+	a nail
+	a picture of a car
+	a picture of a dog
+	a picture of a palace
+	a picture of a girl
+	a picture of a moutain
+
+
+Type 'help' for a list of possible actions.
+
+> take hammer
+Observaton: The hammer is removed from the living room. You put the hammer in your inventory.
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take nail
+Observaton: The nail is removed from the living room. You put the nail in your inventory.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> hammer nail on back wall with hammer
+Observaton: The nail is hammered on the back wall.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take picture of a girl
+Observaton: The picture of a girl is removed from the living room. You put the picture of a girl in your inventory.
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> hang picture of a girl on nail
+Observaton: You hang the picture of a girl on the nail.
+
+Current step: 5
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>

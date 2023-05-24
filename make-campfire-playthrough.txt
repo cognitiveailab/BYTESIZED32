@@ -1,0 +1,175 @@
+(base) peter@titan:~/github/text-games-corpus$ /bin/python3 /home/peter/github/text-games-corpus/make-campfire.py
+Task Description: Your task is to make a fire in the fire pit.
+
+Initial Observation: You find yourself outside in a forest.  Around you, you see: 
+        yourself
+        a fire pit that is empty
+        a match
+        an axe
+        a tree
+
+
+Type 'help' for a list of possible actions.
+
+> help
+Possible actions: dict_keys(['look around', 'look', 'inventory', 'take yourself', 'take yourself from forest', 'take fire pit', 'take fire pit from forest', 'take match', 'take match from forest', 'take axe', 'take axe from forest', 'take tree', 'take tree from forest', 'open yourself', 'close yourself', 'open fire pit', 'close fire pit', 'open match', 'close match', 'open axe', 'close axe', 'open tree', 'close tree', 'examine yourself', 'examine fire pit', 'examine match', 'examine axe', 'examine tree', 'turn on yourself', 'turn off yourself', 'turn on fire pit', 'turn off fire pit', 'turn on match', 'turn off match', 'turn on axe', 'turn off axe', 'turn on tree', 'turn off tree', 'put yourself in fire pit', 'put yourself in match', 'put yourself in axe', 'put yourself in tree', 'put fire pit in yourself', 'put fire pit in match', 'put fire pit in axe', 'put fire pit in tree', 'put match in yourself', 'put match in fire pit', 'put match in axe', 'put match in tree', 'put axe in yourself', 'put axe in fire pit', 'put axe in match', 'put axe in tree', 'put tree in yourself', 'put tree in fire pit', 'put tree in match', 'put tree in axe', 'use yourself on fire pit', 'use yourself on match', 'use yourself on axe', 'use yourself on tree', 'use fire pit on yourself', 'use fire pit on match', 'use fire pit on axe', 'use fire pit on tree', 'use match on yourself', 'use match on fire pit', 'use match on axe', 'use match on tree', 'use axe on yourself', 'use axe on fire pit', 'use axe on match', 'use axe on tree', 'use tree on yourself', 'use tree on fire pit', 'use tree on match', 'use tree on axe'])
+
+> look
+Observaton: You find yourself outside in a forest.  Around you, you see: 
+        yourself
+        a fire pit that is empty
+        a match
+        an axe
+        a tree
+
+
+Current step: 1
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take axe
+Observaton: The axe is removed from the forest. You put the axe in your inventory.
+
+Current step: 2
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use axe on tree
+Observaton: You use the axe to chop the tree.
+
+Current step: 3
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself outside in a forest.  Around you, you see: 
+        yourself
+        a fire pit that is empty
+        a match
+        a chopped down tree
+
+
+Current step: 4
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use axe on chopped down tree
+Observaton: You use the axe to chop the chopped down tree.
+
+Current step: 5
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself outside in a forest.  Around you, you see: 
+        yourself
+        a fire pit that is empty
+        a match
+        some firewood
+
+
+Current step: 6
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take firewood
+Observaton: The firewood is removed from the forest. You put the firewood in your inventory.
+
+Current step: 7
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself outside in a forest.  Around you, you see: 
+        yourself
+        a fire pit that is empty
+        a match
+
+
+Current step: 8
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> put firewood in fire pit
+Observaton: The firewood is removed from the agent.
+The firewood is placed in the fire pit.
+
+Current step: 9
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> look
+Observaton: You find yourself outside in a forest.  Around you, you see: 
+        yourself
+        a fire pit that looks to have some firewood in it
+        a match
+
+
+Current step: 10
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take match
+Observaton: The match is removed from the forest. You put the match in your inventory.
+
+Current step: 11
+Score: 0
+Reward: 0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> use match on firewood
+Observaton: You use the match to light the firewood on fire. The match is used up.
+
+Current step: 12
+Score: 1
+Reward: 1
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> look
+Observaton: You find yourself outside in a forest.  Around you, you see: 
+        yourself
+        a fire pit that looks to have some firewood that is on fire in it
+
+
+Current step: 13
+Score: 1
+Reward: 0
+Game Over: True
+Game Won: True
+
+----------------------------------------
+> 

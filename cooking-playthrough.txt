@@ -1,0 +1,174 @@
+Task Description: Your task is to prepare a meal following the instructions of the cook book.
+
+Initial Observation: You find yourself in a kitchen.  In the kitchen, you see:
+	yourself
+	the patato
+	the carrot
+	the onion
+	the cucumber
+	the green hot pepper
+	the cook book
+	the knife
+	the stove
+	the oven
+
+
+Type 'help' for a list of possible actions.
+
+> take cook book
+Observaton: The cook book is removed from the kitchen. You put the cook book in your inventory.
+
+Current step: 1
+Score: 0.0
+Reward: 0.0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> read cook book
+Observaton: Gather all following ingredients and follow the directions to prepare this tasty meal.
+
+Ingredients:
+	patato
+	carrot
+	onion
+	cucumber
+
+Directions:
+	dice the patato
+	roast the patato
+	roast the carrot
+	dice the onion
+	fry the onion
+	roast the cucumber
+	prepare meal
+
+
+Current step: 2
+Score: 0.0
+Reward: 0.0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take knife
+Observaton: The knife is removed from the kitchen. You put the knife in your inventory.
+
+Current step: 3
+Score: 0.0
+Reward: 0.0
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take patato
+Observaton: The patato is removed from the kitchen. You put the patato in your inventory.
+
+Current step: 4
+Score: 0.09
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> dice patato with knife
+Observaton: You dice the patato.
+
+Current step: 5
+Score: 0.18
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> cook patato in oven
+Observaton: You roast the patato in the oven
+
+Current step: 6
+Score: 0.27
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take carrot
+Observaton: The carrot is removed from the kitchen. You put the carrot in your inventory.
+
+Current step: 7
+Score: 0.36
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> cook carrot in oven
+Observaton: You roast the carrot in the oven
+
+Current step: 8
+Score: 0.45
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take onion
+Observaton: The onion is removed from the kitchen. You put the onion in your inventory.
+
+Current step: 9
+Score: 0.55
+Reward: 0.1
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> dice onion with knife
+Observaton: You dice the onion.
+
+Current step: 10
+Score: 0.64
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> cook onion in stove
+Observaton: You fry the onion in the stove
+
+Current step: 11
+Score: 0.73
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> take cucumber
+Observaton: The cucumber is removed from the kitchen. You put the cucumber in your inventory.
+
+Current step: 12
+Score: 0.82
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> cook cucumber in oven
+Observaton: You roast the cucumber in the oven
+
+Current step: 13
+Score: 0.91
+Reward: 0.09
+Game Over: False
+Game Won: False
+
+----------------------------------------
+> prepare meal
+Observaton: You prepare the meal.
+
+Current step: 14
+Score: 1.0
+Reward: 0.09
+Game Over: True
+Game Won: True
+
+----------------------------------------
+>
