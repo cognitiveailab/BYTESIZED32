@@ -36,11 +36,6 @@ try:
 except:
     pass
 
-openai.api_key = openai.api_key or os.getenv("OPENAI_API_KEY")
-if not openai.api_key.startswith("sk-"):
-    openai.api_type = "azure"
-    openai.api_base = "https://gcrgpt4aoai7.openai.azure.com/"
-    openai.api_version = "2023-03-15-preview"
 
 # arg parser
 def parse_args():
