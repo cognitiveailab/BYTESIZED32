@@ -67,3 +67,18 @@ python scripts/make_table2.py --results results/run/results.json
 python scripts/make_table3.py --results results/run/results.json
 python scripts/make_figure4.py --results results/run/results.json
 ```
+
+# Citing ByteSized32
+Our paper was presented at EMNLP2023 and is also available on [Arxiv](https://arxiv.org/abs/2305.14879).
+
+If you use our codebase, please consider citing our paper:
+```
+@article{Wang2023ByteSized32AC,
+  title={ByteSized32: A Corpus and Challenge Task for Generating Task-Specific World Models Expressed as Text Games},
+  author={Ruoyao Wang and Graham Todd and Xingdi Yuan and Ziang Xiao and Marc-Alexandre C{\^o}t{\'e} and Peter Alexander Jansen},
+  journal={ArXiv},
+  year={2023},
+  volume={abs/2305.14879},
+  url={https://api.semanticscholar.org/CorpusID:258865971}
+}
+```
