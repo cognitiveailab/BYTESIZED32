@@ -1,0 +1,17 @@
+Game Name,Device (temperature),Device (sink),Device (other),Multiple rooms,Tools,Electrical objects,objects that will change names based on states,"special agents (the agent has some task critical properties, e.g. use sunscreen, wear a spacesuit )",task-critical objects with a special property to be measured
+test_1,2,,1,,1,,,,
+test_2,,2,,,1,,,,
+test_3,,,2,,,,,,
+test_4,,,,2,,,,,
+test_5,,,,,2,,,,
+test_6,,,,,,2,,,
+test_7,,1,,,,,2,,
+test_8,,,,1,,,,2,
+test_9,,,,,1,,,,2
+test_10,2,,,,,,,,
+test_11,,2,,,,,,,
+test_12,,,2,,,,,,
+test_13,,,,2,,,,,
+test_14,,,,,2,,,,
+test_15,,,,,,,,2,
+test_16,,,,,,,,,2

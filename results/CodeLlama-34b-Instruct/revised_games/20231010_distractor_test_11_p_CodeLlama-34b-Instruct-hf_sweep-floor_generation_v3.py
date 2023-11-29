@@ -1,0 +1,606 @@
+#
+#   Specific Game Objects
+#
+class Sink(Container):
+    def __init__(self, name):
+        GameObject.__init__(self, name)
+        Container.__init__(self, name)
+        self.properties["isContainer"] = True
+        self.properties["isOpenable"] = True
+        self.properties["isOpen"] = False
+        self.properties["isActivatable"] = True
+
+    # Try to turn the sink on
+    # Returns an observation string, and a success flag (boolean)
+    def turnOn(self):
+        # First, check to see if this object is activatable
+        if not self.getProperty("isActivatable"):
+            # If not, then it can't be turned on
+            return ("The " + self.name + " can't be turned on.", False)
+
+        # If this object is activatable, then check to see if it is already on
+        if self.getProperty("isOpen"):
+            # If so, then it can't be turned on
+            return ("The " + self.name + " is already on.", False)
+
+        # If this object is activatable and it is off, then turn it on
+        self.properties["isOpen"] = True
+        return ("The " + self.name + " is now on.", True)
+
+    # Try to turn the sink off
+    # Returns an observation string, and a success flag (boolean)
+    def turnOff(self):
+        # First, check to see if this object is activatable
+        if not (self.getProperty("isActivatable") == True):
+            # If not, then it can't be turned off
+            return ("The " + self.name + " can't be turned off.", False)
+
+        # If this object is activatable, then check to see if it is already off
+        if not (self.getProperty("isOpen") == True):
+            # If so, then it can't be turned off
+            return ("The " + self.name + " is already off.", False)
+
+        # If this object is activatable and it is on, then turn it off
+        self.properties["isOpen"] = False
+        return ("The " + self.name + " is now off.", True)
+
+    # Make a human-readable string that describes this object
+    def makeDescriptionStr(self, makeDetailed=False):
+        if len(self.contains) == 0:
+            return f"an empty {self.name}"
+        else:
+            outStr = f"a(n) {self.name}, which contains: \n"
+            for obj in self.contains:
+                outStr += '\n'.join(["\t\t" + desc for desc in obj.makeDescriptionStr().strip().split('\n')]) + '\n'
+
+            return outStr
+
+
+
+#
+#   Specific Game Objects
+#
+class Cup(Container):
+    def __init__(self, name):
+        GameObject.__init__(self, name)
+        Container.__init__(self, name)
+        self.properties["isContainer"] = True
+        self.properties["isOpenable"] = True
+        self.properties["isOpen"] = False
+
+    # Make a human-readable string that describes this object
+    def makeDescriptionStr(self, makeDetailed=False):
+        if len(self.contains) == 0:
+            return f"an empty {self.name}"
+        else:
+            outStr = f"a(n) {self.name}, which contains: \n"
+            for obj in self.contains:
+                outStr += '\n'.join(["\t\t" + desc for desc in obj.makeDescriptionStr().strip().split('\n')]) + '\n'
+
+            return outStr
+
+class Water(GameObject):
+    def __init__(self, name):
+        GameObject.__init__(self, name)
+        self.properties["isMoveable"] = False # We don't allow the water to be directly taken by the agent
+
+    def makeDescriptionStr(self, makeDetailed=False):
+        if self.parentContainer.name == "room":
+            return f"{self.name} on the ground"
+        else:
+            return self.name
+
+class Substance(GameObject):
+    def __init__(self, name):
+        GameObject.__init__(self, name)
+        self.properties["isMoveable"] = False # We don't allow the substance to be directly taken by the agent
+        self.properties["soluble"] = False
+
+    def makeDescriptionStr(self, makeDetailed=False):
+        if self.parentContainer.name == "room":
+            return f"{self.name} on the ground"
+        else:
+            return self.name
+
+class Tool(GameObject):
+    def __init__(self, name):
+        GameObject.__init__(self, name)
+        self.properties["isMoveable"] = False # We don't allow the tool to be directly taken by the agent
+
+    def makeDescriptionStr(self, makeDetailed=False):
+        if self.parentContainer.name == "room":
+            return f"{self.name} on the ground"
+        else:
+            return self.name
+
+# The world is the root object of the game object tree.  In single room environments, it's where all the objects are located.
+class World(Container):
+    def __init__(self):
+        Container.__init__(self, "room")
+
+    def makeDescriptionStr(self, makeDetailed=False):
+        outStr = "You find yourself in a room.  In the room, you see: \n"
+        for obj in self.contains:
+            outStr += '\n'.join(["\t" + desc for desc in obj.makeDescriptionStr().strip().split('\n')]) + '\n'
+
+        return outStr
+
+
+# The agent (just a placeholder for a container for the inventory)
+class Agent(Container):
+    def __init__(self):
+        GameObject.__init__(self, "agent")
+        Container.__init__(self, "agent")
+
+    def getReferents(self):
+        return ["yourself"]
+
+    def makeDescriptionStr(self, makeDetailed=False):
+        return "yourself"
+
+class TextGame:
+
+    def __init__(self, randomSeed):
+        # Random number generator, initialized with a seed passed as an argument
+        self.random = random.Random(randomSeed)
+        # The agent/player
+        self.agent = Agent()
+        # Game Object Tree
+        self.rootObject = self.initializeWorld()
+        # Game score
+        self.score = 0
+        self.numSteps = 0
+        # Game over flag
+        self.gameOver = False
+        self.gameWon = False
+        # Last game observation
+        self.observationStr = self.rootObject.makeDescriptionStr()
+        # Do calculate initial scoring
+        self.calculateScore()
+
+    # Create/initialize the world/environment for this game
+    def initializeWorld(self):
+        world = World()
+
+        # Add the agent
+        world.addObject(self.agent)
+
+        # Add a sink
+        sink = Sink("sink")
+        world.addObject(sink)
+
+        # Add a cup
+        cup = Cup("cup")
+        world.addObject(cup)
+
+        # Add water
+        water = Water("water")
+        world.addObject(water)
+
+        # Add a substance
+        possible_substances = ["sugar", "salt", "coffee", "sand", "sugar", "salt", "coffee", "sand"]
+        num_substances = self.random.randint(1,3)
+        self.random.shuffle(possible_substances)
+        all_substances = possible_substances[:num_substances]
+
+        for substance_name in all_substances:
+            substance = Substance(substance_name)
+            world.addObject(substance)
+
+        # Distractors
+        mop = Tool("mop")
+        world.addObject(mop)
+
+        # Return the world
+        return world
+
+    # Get the task description for this game
+    def getTaskDescription(self):
+        return 'Your task is to figure out whether the unknown substance is water-soluble.'
+
+    # Make a dictionary whose keys are object names (strings), and whose values are lists of object references with those names.
+    # This is useful for generating valid actions, and parsing user input.
+    def makeNameToObjectDict(self):
+        # Get a list of all game objects that could serve as arguments to actions
+        allObjects = self.rootObject.getAllContainedObjectsRecursive()
+
+        # Make a dictionary whose keys are object names (strings), and whose values are lists of object references with those names.
+        nameToObjectDict = {}
+        for obj in allObjects:
+            for name in obj.getReferents():
+                #print("Object referent: " + name)
+                if name in nameToObjectDict:
+                    nameToObjectDict[name].append(obj)
+                else:
+                    nameToObjectDict[name] = [obj]
+
+        return nameToObjectDict
+
+    #
+    #   Action generation
+    #
+
+    def addAction(self, actionStr, actionArgs):
+        # Check whether the action string key already exists -- if not, add a blank list
+        if not (actionStr in self.possibleActions):
+            self.possibleActions[actionStr] = []
+        # Add the action arguments to the list
+        self.possibleActions[actionStr].append(actionArgs)
+
+    # Returns a list of valid actions at the current time step
+    def generatePossibleActions(self):
+        # Get a list of all game objects that could serve as arguments to actions
+        allObjects = self.makeNameToObjectDict()
+
+        # Make a dictionary whose keys are possible action strings, and whose values are lists that contain the arguments.
+        self.possibleActions = {}
+
+        # Actions with zero arguments
+        # (0-arg) Look around the environment
+        self.addAction("look around", ["look around"])
+        self.addAction("look", ["look around"])
+
+        # (0-arg) Look at the agent's current inventory
+        self.addAction("inventory", ["inventory"])
+
+
+        # Actions with one object argument
+        # (1-arg) Take
+        for objReferent, objs in allObjects.items():
+            for obj in objs:
+                self.addAction("take " + objReferent, ["take", obj])
+                self.addAction("take " + objReferent + " from " + obj.parentContainer.getReferents()[0], ["take", obj])
+
+        # (1-arg) Open/Close
+        for objReferent, objs in allObjects.items():
+            for obj in objs:
+                self.addAction("open " + objReferent, ["open", obj])
+                self.addAction("close " + objReferent, ["close", obj])
+
+        # Actions with two object arguments
+        # (2-arg) Put
+        for objReferent1, objs1 in allObjects.items():
+            for objReferent2, objs2 in allObjects.items():
+                for obj1 in objs1:
+                    for obj2 in objs2:
+                        if obj1 != obj2:
+                            containerPrefix = "in"
+                            if obj2.properties["isContainer"]:
+                                containerPrefix = obj2.properties["containerPrefix"]
+                            self.addAction("put " + objReferent1 + " " + containerPrefix + " " + objReferent2, ["put", obj1, obj2])
+
+        # (2-arg) Empty
+        for objReferent1, objs1 in allObjects.items():
+            for objReferent2, objs2 in allObjects.items():
+                for obj1 in objs1:
+                    for obj2 in objs2:
+                        if obj1 != obj2:
+                            self.addAction("empty " + objReferent1 + " to " + objReferent2, ["empty", obj1, obj2])
+
+        # Actions with three object arguments
+        # (3-arg) Sweep
+        for objReferent1, objs1 in allObjects.items():
+            for objReferent2, objs2 in allObjects.items():
+                for objReferent3, objs3 in allObjects.items():
+                    for obj1 in objs1:
+                        for obj2 in objs2:
+                            for obj3 in objs3:
+                                if obj1 != obj2 and obj2 != obj3 and obj3 != obj1:
+                                    self.addAction(f"sweep {objReferent1} to {objReferent2} with {objReferent3}" , ["sweep", obj1, obj2, obj3])
+
+
+        return self.possibleActions
+
+    #
+    #   Interpret actions
+    #
+
+    # Take an object from a container
+    def actionTake(self, obj):
+        # If the object doesn't have a parent container, then it's dangling and something has gone wrong
+        if (obj.parentContainer == None):
+            return "Something has gone wrong -- that object is dangling in the void.  You can't take that."
+
+        # Take the object from the parent container, and put it in the inventory
+        obsStr, objRef, success = obj.parentContainer.takeObjectFromContainer(obj)
+        if (success == False):
+            return obsStr
+
+        # Add the object to the inventory
+        self.agent.addObject(obj)
+        return obsStr + " You put the " + obj.getReferents()[0] + " in your inventory."
+
+    # Put an object in a container
+    def actionPut(self, objToMove, newContainer):
+        # Check that the destination container is a container
+        if (newContainer.getProperty("isContainer") == False):
+            return "You can't put things in the " + newContainer.getReferents()[0] + "."
+
+        # Enforce that the object must be in the inventory to do anything with it
+        if (objToMove.parentContainer != self.agent):
+            return "You don't currently have the " + objToMove.getReferents()[0] + " in your inventory."
+
+        # Take the object from it's current container, and put it in the new container.
+        # Deep copy the reference to the original parent container, because the object's parent container will be changed when it's taken from the original container
+        originalContainer = objToMove.parentContainer
+        obsStr1, objRef, success = objToMove.parentContainer.takeObjectFromContainer(objToMove)
+        if (success == False):
+            return obsStr1
+
+        # Put the object in the new container
+        obsStr2, success = newContainer.placeObjectInContainer(objToMove)
+        if (success == False):
+            # For whatever reason, the object can't be moved into the new container. Put the object back into the original container
+            originalContainer.addObject(objToMove)
+            return obsStr2
+
+        # Success -- show both take and put observations
+        return obsStr1 + "\n" + obsStr2
+
+    # Display agent inventory
+    def actionInventory(self):
+        # Get the inventory
+        inventory = self.agent.contains
+        # If the inventory is empty, return a message
+        if (len(inventory) == 0):
+            return "Your inventory is empty."
+        # Otherwise, return a list of the inventory items
+        else:
+            obsStr = "You have the following items in your inventory:\n"
+            for obj in inventory:
+                obsStr += "\t" + obj.makeDescriptionStr() + "\n"
+            return obsStr
+
+
+    # Open a container
+    def actionOpen(self, obj):
+        # Check if the object is a container
+        if (obj.getProperty("isContainer") == True):
+            # This is handled by the object itself
+            obsStr, success = obj.openContainer()
+            return obsStr
+        else:
+            return "You can't open that."
+
+    # Close a container
+    def actionClose(self, obj):
+        # Check if the object is a container
+        if (obj.getProperty("isContainer") == True):
+            # This is handled by the object itself
+            obsStr, success = obj.closeContainer()
+            return obsStr
+        else:
+            return "You can't close that."
+
+    # Turn on a device
+    def actionTurnOn(self, obj):
+        # Check if the object is a device
+        if (obj.getProperty("isActivatable") == True):
+            # This is handled by the object itself
+            obsStr, success = obj.turnOn()
+            return obsStr
+        else:
+            return "You can't turn that on."
+
+    # Turn off a device
+    def actionTurnOff(self, obj):
+        # Check if the object is a device
+        if (obj.getProperty("isActivatable") == True):
+            # This is handled by the object itself
+            obsStr, success = obj.turnOff()
+            return obsStr
+        else:
+            return "You can't turn that off."
+
+    # Sweep garbage to the dustpan with a sweep
+    def actionSweep(self, substance, cup, sink):
+        # check the substance
+        if type(substance) != Substance:
+            return f"{substance.name} is not a substance."
+        if cup.name != "cup":
+            return f"You can't sweep {substance.name} to {cup.name}."
+        if sink.name != "sink":
+            return f"You can't sweep {substance.name} to {sink.name}."
+
+        # the agent should take the cup before sweeping
+        if type(cup.parentContainer) != Agent:
+            return f"You should take the {cup.name} before sweeping."
+
+        # the agent should take the sink before sweeping
+        if type(sink.parentContainer) != Agent:
+            return f"You should take the {sink.name} before sweeping."
+
+        # Only substance on the ground can be swept
+        if substance.parentContainer.name != "room":
+            return "You can only sweep substance on the ground."
+
+        cup.addObject(substance)
+        return f"You sweep {substance.name} to {cup.name}."
+
+    # Dump items in the a cup to a container
+    def actionEmpty(self, cup, sink):
+        if cup.name != "cup":
+            return f"You can't empty {cup.name}."
+
+        if not sink.getProperty("isContainer") or type(sink) == Agent:
+            return f"You can't empty to {sink.name}"
+
+        if not sink.getProperty("isOpen"):
+            return f"The {self.name} is closed."
+
+        while len(cup.contains) > 0:
+            sink.addObject(cup.contains[0])
+
+        return f"You emptied the {cup.name} to the {sink.name}."
+
+    # Performs an action in the environment, returns the result (a string observation, the reward, and whether the game is completed).
+    def step(self, actionStr):
+        self.observationStr = ""
+        reward = 0
+
+        # Check to make sure the action is in the possible actions dictionary
+        if actionStr not in self.possibleActions:
+            self.observationStr = "I don't understand that."
+            return (self.observationStr, self.score, reward, self.gameOver, self.gameWon)
+
+        self.numSteps += 1
+
+        # Find the action in the possible actions dictionary
+        actions = self.possibleActions[actionStr]
+        action = None
+
+        # Check for an ambiguous action (i.e. one that has multiple possible arguments)
+        if (len(actions) > 1):
+            # If there are multiple possible arguments, for now just choose the first one
+            action = actions[0]
+        else:
+            # Otherwise, also just take the first action in the list of possible actions
+            action = actions[0]
+
+        # Interpret the action
+        actionVerb = action[0]
+
+
+        if actionVerb == "look around":
+            # Look around the environment -- i.e. show the description of the world.
+            self.observationStr = self.rootObject.makeDescriptionStr()
+        elif actionVerb == "inventory":
+            # Display the agent's inventory
+            self.observationStr = self.actionInventory()
+        elif actionVerb == "take":
+            # Take an object from a container
+            thingToTake = action[1]
+            self.observationStr = self.actionTake(thingToTake)
+
+        elif actionVerb == "put":
+            # Put an object in a container
+            thingToMove = action[1]
+            newContainer = action[2]
+            self.observationStr = self.actionPut(thingToMove, newContainer)
+
+        elif actionVerb == "open":
+            # Open a container
+            thingToOpen = action[1]
+            self.observationStr = self.actionOpen(thingToOpen)
+        elif actionVerb == "close":
+            # Close a container
+            thingToClose = action[1]
+            self.observationStr = self.actionClose(thingToClose)
+
+        elif actionVerb == "turn on":
+            # Turn on a device
+            thingToTurnOn = action[1]
+            self.observationStr = self.actionTurnOn(thingToTurnOn)
+        elif actionVerb == "turn off":
+            # Turn off a device
+            thingToTurnOff = action[1]
+            self.observationStr = self.actionTurnOff(thingToTurnOff)
+
+        elif actionVerb == "sweep":
+            # Use a device on an object
+            substance = action[1]
+            cup = action[2]
+            sink = action[3]
+            self.observationStr = self.actionSweep(substance, cup, sink)
+
+        elif actionVerb == "empty":
+            cup = action[1]
+            sink = action[2]
+            self.observationStr = self.actionEmpty(cup, sink)
+
+        # Catch-all
+        else:
+            self.observationStr = "ERROR: Unknown action."
+
+        # Do one tick of the environment
+        self.doWorldTick()
+
+        # Calculate the score
+        lastScore = self.score
+        self.calculateScore()
+        reward = self.score - lastScore
+
+        return (self.observationStr, self.score, reward, self.gameOver, self.gameWon)
+
+    # Call the object update for each object in the environment
+    def doWorldTick(self):
+        # Get a list of all objects in the environment
+        allObjects = self.rootObject.getAllContainedObjectsRecursive()
+        # Loop through all objects, and call their tick()
+        for obj in allObjects:
+            obj.tick()
+
+    # Calculate the game score
+    def calculateScore(self):
+        # Baseline score
+        self.score = 0
+
+        # Check the water temperature when the agent takes a bath
+        allObjects = self.rootObject.getAllContainedObjectsRecursive()
+        all_soluble = True
+        for obj in allObjects:
+            if type(obj) == Substance and type(obj.parentContainer) != Sink:
+                all_soluble = False
+
+        if all_soluble:
+            self.gameOver = True
+            self.gameWon = True
+            self.score = 1
+
+
+
+
+# Main Program
+def main():
+    # Random seed
+    randomSeed = 0
+
+    # Create a new game
+    game = TextGame(randomSeed = randomSeed)
+
+    # Get a list of valid actions
+    possibleActions = game.generatePossibleActions()
+    #print("Possible actions: " + str(possibleActions.keys()))
+    print("Task Description: " + game.getTaskDescription())
+    print()
+    print("Initial Observation: " + game.observationStr)
+    print()
+    print("Type 'help' for a list of possible actions.")
+    print()
+
+
+    # Main game loop
+    #while not game.gameOver:
+    while True:
+
+        # Get the player's action
+        actionStr = ""
+        while ((len(actionStr) == 0) or (actionStr == "help")):
+            actionStr = input("> ")
+            if (actionStr == "help"):
+                print("Possible actions: " + str(possibleActions.keys()))
+                print("")
+                actionStr = ""
+            elif (actionStr == "exit") or (actionStr == "quit"):
+                return
+
+        # Perform the action
+        observationStr, score, reward, gameOver, gameWon = game.step(actionStr)
+
+        # Get a list of valid actions
+        possibleActions = game.generatePossibleActions()
+
+        # Print the current game state
+        print("Observation: " + observationStr)
+        print("")
+        print("Current step: " + str(game.numSteps))
+        print("Score: " + str(score))
+        print("Reward: " + str(reward))
+        print("Game Over: " + str(gameOver))
+        print("Game Won: " + str(gameWon))
+        print("")
+        print("----------------------------------------")
+
+# Run the main program
+if __name__ == "__main__":
+    main()
