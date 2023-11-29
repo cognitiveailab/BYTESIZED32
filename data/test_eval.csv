@@ -1,0 +1,17 @@
+test,object,action,distractor
+test_1,Stove,use,1
+test_2,Sink,pour,0
+test_3,Grill,turn on/off,0
+test_4,Room/Door,read,0
+test_5,Screwdriver,open/close,0
+test_6,LED,connect,0
+test_7,Pea,turn on/off,1
+test_8,Agent,use X,1
+test_9,Paper,measure,0
+test_10,Stove,turn on/off,1
+test_11,Sink,turn on/off,0
+test_12,VendingMachine,take/put,0
+test_13,Room/Door,open door,0
+test_14,Shovel,dig,0
+test_15,Agent,put on,0
+test_16,Stone,answer,0

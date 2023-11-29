@@ -1,3 +1,5 @@
 openai
 tiktoken
 pandas
+tqdm
+plotly
