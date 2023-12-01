@@ -1,7 +1,6 @@
-(base) peter@titan:~/github/text-games-corpus$ /bin/python3 /home/peter/github/text-games-corpus/use-bandage.py
 Task Description: Your task is to put bandages on any cuts.
 
-Initial Observation: You find yourself in a bathroom.  Around you, you see: 
+Initial Observation: You find yourself in a bathroom.  Around you, you see:
         yourself
         a blue glove
         a person that looks to have a left hand, a left foot, a head that has a wound, a right hand, and a right foot
@@ -11,11 +10,11 @@ Initial Observation: You find yourself in a bathroom.  Around you, you see:
 
 Type 'help' for a list of possible actions.
 
-> help   
+> help
 Possible actions: dict_keys(['look around', 'look', 'inventory', 'take yourself', 'take yourself from bathroom', 'take blue glove', 'take blue glove from bathroom', 'take person', 'take person from bathroom', 'take left hand', 'take left hand from person', 'take left foot', 'take left foot from person', 'take head', 'take head from person', 'take right hand', 'take right hand from person', 'take right foot', 'take right foot from person', 'take sticker', 'take sticker from bathroom', 'take bandage box', 'take bandage box from bathroom', 'take bandage', 'take bandage from bandage box', 'open yourself', 'close yourself', 'open blue glove', 'close blue glove', 'open person', 'close person', 'open left hand', 'close left hand', 'open left foot', 'close left foot', 'open head', 'close head', 'open right hand', 'close right hand', 'open right foot', 'close right foot', 'open sticker', 'close sticker', 'open bandage box', 'close bandage box', 'open bandage', 'close bandage', 'examine yourself', 'examine blue glove', 'examine person', 'examine left hand', 'examine left foot', 'examine head', 'examine right hand', 'examine right foot', 'examine sticker', 'examine bandage box', 'examine bandage', 'put yourself in blue glove', 'put yourself on person', 'put yourself on left hand', 'put yourself on left foot', 'put yourself on head', 'put yourself on right hand', 'put yourself on right foot', 'put yourself in sticker', 'put yourself in bandage box', 'put yourself in bandage', 'put blue glove in yourself', 'put blue glove on person', 'put blue glove on left hand', 'put blue glove on left foot', 'put blue glove on head', 'put blue glove on right hand', 'put blue glove on right foot', 'put blue glove in sticker', 'put blue glove in bandage box', 'put blue glove in bandage', 'put person in yourself', 'put person in blue glove', 'put person on left hand', 'put person on left foot', 'put person on head', 'put person on right hand', 'put person on right foot', 'put person in sticker', 'put person in bandage box', 'put person in bandage', 'put left hand in yourself', 'put left hand in blue glove', 'put left hand on person', 'put left hand on left foot', 'put left hand on head', 'put left hand on right hand', 'put left hand on right foot', 'put left hand in sticker', 'put left hand in bandage box', 'put left hand in bandage', 'put left foot in yourself', 'put left foot in blue glove', 'put left foot on person', 'put left foot on left hand', 'put left foot on head', 'put left foot on right hand', 'put left foot on right foot', 'put left foot in sticker', 'put left foot in bandage box', 'put left foot in bandage', 'put head in yourself', 'put head in blue glove', 'put head on person', 'put head on left hand', 'put head on left foot', 'put head on right hand', 'put head on right foot', 'put head in sticker', 'put head in bandage box', 'put head in bandage', 'put right hand in yourself', 'put right hand in blue glove', 'put right hand on person', 'put right hand on left hand', 'put right hand on left foot', 'put right hand on head', 'put right hand on right foot', 'put right hand in sticker', 'put right hand in bandage box', 'put right hand in bandage', 'put right foot in yourself', 'put right foot in blue glove', 'put right foot on person', 'put right foot on left hand', 'put right foot on left foot', 'put right foot on head', 'put right foot on right hand', 'put right foot in sticker', 'put right foot in bandage box', 'put right foot in bandage', 'put sticker in yourself', 'put sticker in blue glove', 'put sticker on person', 'put sticker on left hand', 'put sticker on left foot', 'put sticker on head', 'put sticker on right hand', 'put sticker on right foot', 'put sticker in bandage box', 'put sticker in bandage', 'put bandage box in yourself', 'put bandage box in blue glove', 'put bandage box on person', 'put bandage box on left hand', 'put bandage box on left foot', 'put bandage box on head', 'put bandage box on right hand', 'put bandage box on right foot', 'put bandage box in sticker', 'put bandage box in bandage', 'put bandage in yourself', 'put bandage in blue glove', 'put bandage on person', 'put bandage on left hand', 'put bandage on left foot', 'put bandage on head', 'put bandage on right hand', 'put bandage on right foot', 'put bandage in sticker', 'put bandage in bandage box'])
 
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a blue glove
         a person that looks to have a left hand, a left foot, a head that has a wound, a right hand, and a right foot
@@ -41,7 +40,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a blue glove
         a person that looks to have a left hand, a left foot, a head that has a wound, a right hand, and a right foot
@@ -67,7 +66,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a blue glove
         a person that looks to have a left hand that has a sticker that says 'get well soon' on it, a left foot, a head that has a wound, a right hand, and a right foot
@@ -92,7 +91,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a person that looks to have a left hand that has a sticker that says 'get well soon' on it, a left foot, a head that has a wound, a right hand, and a right foot
         a bandage box that is closed
@@ -129,7 +128,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a person that looks to have a left hand that has a sticker that says 'get well soon' on it, a left foot, a head that has a wound, a right hand that has a blue glove on it, and a right foot
         a bandage box that is closed
@@ -153,7 +152,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a person that looks to have a left hand that has a sticker that says 'get well soon' on it, a left foot, a head that has a wound, a right hand that has a blue glove on it, and a right foot
         a bandage box that is open and that looks to have a bandage in it
@@ -177,7 +176,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a person that looks to have a left hand that has a sticker that says 'get well soon' on it, a left foot, a head that has a wound, a right hand that has a blue glove on it, and a right foot
         a bandage box that is open and appears to be empty
@@ -190,7 +189,7 @@ Game Over: False
 Game Won: False
 
 ----------------------------------------
-> put bandage on head 
+> put bandage on head
 Observaton: I don't understand that.
 
 Current step: 14
@@ -215,7 +214,7 @@ Game Won: True
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a bathroom.  Around you, you see: 
+Observaton: You find yourself in a bathroom.  Around you, you see:
         yourself
         a person that looks to have a left hand that has a sticker that says 'get well soon' on it, a left foot, a head that has a wound with a bandage on it, a right hand that has a blue glove on it, and a right foot
         a bandage box that is open and appears to be empty

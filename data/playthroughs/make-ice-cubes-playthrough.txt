@@ -1,7 +1,6 @@
-(base) peter@titan:~/github/text-games-corpus$ /bin/python3 /home/peter/github/text-games-corpus/make-ice-cubes.py
 Task Description: Your task is to make ice cubes.
 
-Initial Observation: You find yourself in a kitchen.  In the kitchen, you see: 
+Initial Observation: You find yourself in a kitchen.  In the kitchen, you see:
         yourself
         a freezer that is currently closed
         a sink that is currently off and that is empty
@@ -23,7 +22,7 @@ Game Won: False
 
 ----------------------------------------
 > examine freezer
-Observaton: a freezer that is currently open and contains the following items: 
+Observaton: a freezer that is currently open and contains the following items:
         an ice cube cray that is empty
 
 
@@ -56,7 +55,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+Observaton: You find yourself in a kitchen.  In the kitchen, you see:
         yourself
         a freezer that is currently open and empty
         a sink that is currently off and that contains one or more items.
@@ -73,7 +72,7 @@ Game Won: False
 
 ----------------------------------------
 > examine sink
-Observaton: a sink that is currently off and that contains the following items: 
+Observaton: a sink that is currently off and that contains the following items:
         an ice cube cray that is empty
 
 
@@ -95,7 +94,7 @@ Game Won: False
 
 ----------------------------------------
 > examine sink
-Observaton: a sink that is currently on and that contains the following items: 
+Observaton: a sink that is currently on and that contains the following items:
         an ice cube cray that looks to have some water in it
 
 
@@ -127,7 +126,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+Observaton: You find yourself in a kitchen.  In the kitchen, you see:
         yourself
         a freezer that is currently open and empty
         a sink that is currently off and that is empty
@@ -165,7 +164,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+Observaton: You find yourself in a kitchen.  In the kitchen, you see:
         yourself
         a freezer that is currently closed
         a sink that is currently off and that is empty
@@ -182,7 +181,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+Observaton: You find yourself in a kitchen.  In the kitchen, you see:
         yourself
         a freezer that is currently closed
         a sink that is currently off and that is empty
@@ -199,7 +198,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself in a kitchen.  In the kitchen, you see: 
+Observaton: You find yourself in a kitchen.  In the kitchen, you see:
         yourself
         a freezer that is currently closed
         a sink that is currently off and that is empty
@@ -226,7 +225,7 @@ Game Won: True
 
 ----------------------------------------
 > examine freezer
-Observaton: a freezer that is currently open and contains the following items: 
+Observaton: a freezer that is currently open and contains the following items:
         an ice cube cray that looks to have some ice in it
 
 
@@ -237,4 +236,4 @@ Game Over: True
 Game Won: True
 
 ----------------------------------------
-> 
+>

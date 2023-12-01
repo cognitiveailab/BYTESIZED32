@@ -1,7 +1,6 @@
-(base) peter@titan:~/github/text-games-corpus$ /bin/python3 /home/peter/github/text-games-corpus/make-campfire.py
 Task Description: Your task is to make a fire in the fire pit.
 
-Initial Observation: You find yourself outside in a forest.  Around you, you see: 
+Initial Observation: You find yourself outside in a forest.  Around you, you see:
         yourself
         a fire pit that is empty
         a match
@@ -15,7 +14,7 @@ Type 'help' for a list of possible actions.
 Possible actions: dict_keys(['look around', 'look', 'inventory', 'take yourself', 'take yourself from forest', 'take fire pit', 'take fire pit from forest', 'take match', 'take match from forest', 'take axe', 'take axe from forest', 'take tree', 'take tree from forest', 'open yourself', 'close yourself', 'open fire pit', 'close fire pit', 'open match', 'close match', 'open axe', 'close axe', 'open tree', 'close tree', 'examine yourself', 'examine fire pit', 'examine match', 'examine axe', 'examine tree', 'turn on yourself', 'turn off yourself', 'turn on fire pit', 'turn off fire pit', 'turn on match', 'turn off match', 'turn on axe', 'turn off axe', 'turn on tree', 'turn off tree', 'put yourself in fire pit', 'put yourself in match', 'put yourself in axe', 'put yourself in tree', 'put fire pit in yourself', 'put fire pit in match', 'put fire pit in axe', 'put fire pit in tree', 'put match in yourself', 'put match in fire pit', 'put match in axe', 'put match in tree', 'put axe in yourself', 'put axe in fire pit', 'put axe in match', 'put axe in tree', 'put tree in yourself', 'put tree in fire pit', 'put tree in match', 'put tree in axe', 'use yourself on fire pit', 'use yourself on match', 'use yourself on axe', 'use yourself on tree', 'use fire pit on yourself', 'use fire pit on match', 'use fire pit on axe', 'use fire pit on tree', 'use match on yourself', 'use match on fire pit', 'use match on axe', 'use match on tree', 'use axe on yourself', 'use axe on fire pit', 'use axe on match', 'use axe on tree', 'use tree on yourself', 'use tree on fire pit', 'use tree on match', 'use tree on axe'])
 
 > look
-Observaton: You find yourself outside in a forest.  Around you, you see: 
+Observaton: You find yourself outside in a forest.  Around you, you see:
         yourself
         a fire pit that is empty
         a match
@@ -51,7 +50,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself outside in a forest.  Around you, you see: 
+Observaton: You find yourself outside in a forest.  Around you, you see:
         yourself
         a fire pit that is empty
         a match
@@ -76,7 +75,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself outside in a forest.  Around you, you see: 
+Observaton: You find yourself outside in a forest.  Around you, you see:
         yourself
         a fire pit that is empty
         a match
@@ -101,7 +100,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself outside in a forest.  Around you, you see: 
+Observaton: You find yourself outside in a forest.  Around you, you see:
         yourself
         a fire pit that is empty
         a match
@@ -126,7 +125,7 @@ Game Won: False
 
 ----------------------------------------
 > look
-Observaton: You find yourself outside in a forest.  Around you, you see: 
+Observaton: You find yourself outside in a forest.  Around you, you see:
         yourself
         a fire pit that looks to have some firewood in it
         a match
@@ -160,7 +159,7 @@ Game Won: True
 
 ----------------------------------------
 > look
-Observaton: You find yourself outside in a forest.  Around you, you see: 
+Observaton: You find yourself outside in a forest.  Around you, you see:
         yourself
         a fire pit that looks to have some firewood that is on fire in it
 
@@ -172,4 +171,4 @@ Game Over: True
 Game Won: True
 
 ----------------------------------------
-> 
+>

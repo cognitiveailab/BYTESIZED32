@@ -1,4 +1,3 @@
-(/datadrive/eric_work_space/venvs2021/exemplar) ➜  programs git:(main) ✗ python metal-detector.py
 Task Description: Your task is to find the buried metal case on the beach. You win the game by putting the metal case in your inventory.
 
 Initial Observation: You find yourself on a beach.  on the beach, you see:
