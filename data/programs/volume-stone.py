@@ -276,7 +276,7 @@ class Sink(Container):
     # Returns an observation string, and a success flag (boolean)
     def turnOn(self):
         # If the sink isn't activatable, then return an error
-        if (self.getProperty("isActivatable") == False):
+        if not self.getProperty("isActivatable"):
             return ("It's not clear how the " + self.getReferents()[0] + " could be turned on.", False)
 
         # If the sink is already on, then return an error
@@ -290,7 +290,7 @@ class Sink(Container):
     # Returns an observation string, and a success flag (boolean)
     def turnOff(self):
         # If the sink isn't activatable, then return an error
-        if (self.getProperty("isActivatable") == False):
+        if not self.getProperty("isActivatable"):
             return ("It's not clear how the " + self.getReferents()[0] + " could be turned off.", False)
 
         # If the sink is already off, then return an error
@@ -462,11 +462,12 @@ class TextGame:
         # (0-arg) Look at the agent's current inventory
         self.addAction("inventory", ["inventory"])
 
-        # (1-arg) examine an object
-        self.addAction("examine", ["examine"])
-
-
         # Actions with one object argument
+
+        # (1-arg) examine an object
+        for objReferent, objs in allObjects.items():
+            for obj in objs:
+                self.addAction("examine " + objReferent, ["examine", obj])
 
         # (1-arg) Take
         for objReferent, objs in allObjects.items():
@@ -534,7 +535,7 @@ class TextGame:
     # Put an object in a container
     def actionPut(self, objToMove, newContainer):
         # Check that the destination container is a container
-        if (newContainer.getProperty("isContainer") == False):
+        if not newContainer.getProperty("isContainer"):
             return "You can't put things in the " + newContainer.getReferents()[0] + "."
 
 
@@ -575,10 +576,10 @@ class TextGame:
 
     # Pour water
     def actionPour(self, water, target):
-        if water.name != "water":
+        if type(water) != Water:
             return f"Cannot pour {water.name}."
         # if the target cannot hold water, remove the water
-        elif target.getProperty("isWaterContainer") == False:
+        elif not target.getProperty("isWaterContainer"):
             referent = water.getReferents()[0]
             water.removeSelfFromContainer()
             del water

@@ -361,6 +361,9 @@ class TextGame:
         # check if the power station is valid
         if power_station not in ['solar farm', 'wind farm', 'hydroelectric power station', 'fossil-fuel power station']:
             return "Unknown power station."
+        # check if the region is valid
+        elif type(region) != Region:
+            return f"{region.name} is not a region."
         else:
             # check if corresponding resource is available in the region
             # No corresponding resource will result in a low efficiency power plant

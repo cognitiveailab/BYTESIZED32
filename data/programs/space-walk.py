@@ -255,8 +255,11 @@ class Door(GameObject):
         room2.connects[room1] = self
 
     def open(self, curr_room):
+        # check if the curr_room is connected by this door
+        if curr_room not in self.connects:
+            return f"You can't open a door that is not in the current room."
         # The door is already opened
-        if self.properties["is_open"]:
+        elif self.properties["is_open"]:
             return f"The door to the {self.connects[curr_room].name} is already open."
         else:
             # If the door is closed, open it
@@ -264,8 +267,11 @@ class Door(GameObject):
             return f"You open the door to the {self.connects[curr_room].name}."
 
     def close(self, curr_room):
+        # check if the curr_room is connected by this door
+        if curr_room not in self.connects:
+            return f"You can't close a door that is not in the current room."
         # The door is already closed
-        if not self.properties["is_open"]:
+        elif not self.properties["is_open"]:
             return f"The door to the {self.connects[curr_room].name} is already closed."
         else:
             # If the door is closed, open it
@@ -491,7 +497,12 @@ class TextGame:
     def actionPut(self, objToMove, newContainer):
         # Check that the destination container is a container
         if (newContainer.getProperty("isContainer") == False):
-            return "You can't put things in the " + newContainer.getReferents()[0] + "."
+            if type(newContainer) == Door:
+                curr_room = self.agent.parentContainer
+                obj_ref = newContainer.getReferents(curr_room)[0]
+            else:
+                obj_ref = newContainer.getReferents()[0]
+            return "You can't put things in the " + obj_ref + "."
 
         # Enforce that the object must be in the inventory to do anything with it
         if (objToMove.parentContainer != self.agent):

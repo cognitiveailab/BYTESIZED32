@@ -362,7 +362,7 @@ class Axe(Device):
             return ("You can't use the axe because it has been combusted and no longer has a handle.", False)
 
         # If the patient object is choppable, then call it's Chop method.
-        if (patientObject.properties["isChoppable"] == True):
+        if patientObject.getProperty("isChoppable"):
             preChoppedName = patientObject.name
             success = patientObject.chop()
             if (success):

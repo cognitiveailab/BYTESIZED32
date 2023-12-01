@@ -198,14 +198,16 @@ class Container(GameObject):
 
 
 # A balance scale
-class BalanceScale(GameObject):
+class BalanceScale(Container):
     def __init__(self, name):
-        GameObject.__init__(self, name)
+        Container.__init__(self, name)
         self.properties["isMoveable"] = False
         # Initialize both sides of the scale
         self.left = Container(f"left side of the {name}")
+        self.left.properties["isMoveable"] = False
         self.left.parent = self
         self.right = Container(f"right side of the {name}")
+        self.right.properties["isMoveable"] = False
         self.right.parent = self
 
     def makeDescriptionStr(self, makeDetailed=False):
@@ -264,6 +266,12 @@ class BalanceScale(GameObject):
             # Add all contained objects
             outList.extend(obj.getAllContainedObjectsRecursive())
         return outList
+
+    def placeObjectInContainer(self, obj):
+        return f"You can't put {obj.name} on a balance scale directly. Put it on one side of the scale.", False
+
+    def takeObjectFromContainer(self, obj):
+        return f"You can't take {obj.name}.", None, False
 
 # Cubes for testing weights
 class Cube(GameObject):

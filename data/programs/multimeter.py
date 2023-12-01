@@ -207,10 +207,8 @@ class ElectricalObject(GameObject):
 
     def disconnect(self, terminal):
         if self.connects[terminal] is not None:
-            obj_connects_to = self.connects[terminal]
-            for key in obj_connects_to.connects:
-                if obj_connects_to.connects[key][0] == self and obj_connects_to.connects[key][1] == terminal:
-                    obj_connects_to.connects[key] = None
+            obj_connects_to, connected_terminal = self.connects[terminal]
+            obj_connects_to.connects[connected_terminal] = None
         self.connects[terminal] = None
 
     def makeDescriptionStr(self, makeDetailed=False):

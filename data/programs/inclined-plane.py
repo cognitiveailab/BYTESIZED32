@@ -216,7 +216,7 @@ class InclinedPlane(Container):
         self.properties["objects"] = {}
 
     def addObject(self, obj):
-        self.properties["objects"] = {obj:0}
+        self.properties["objects"][obj] = 0
         super().addObject(obj)
 
     def removeObject(self, obj):

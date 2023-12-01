@@ -247,11 +247,11 @@ class Wall(Container):
 
     # We don't allow anything to be put on the wall.
     def placeObjectInContainer(self, obj):
-        return f"You can't place the {obj.name} on the {self.name}"
+        return f"You can't place the {obj.name} on the {self.name}", False
 
     # Things (nails) can't be taken off the wall by the agent.
     def takeObjectFromContainer(self, obj):
-        return f"You can't get the {obj.name} off the wall."
+        return f"You can't get the {obj.name} off the wall.", None, False
 
     # Nails can be hammered on the wall
     def hammer(self, nail):
