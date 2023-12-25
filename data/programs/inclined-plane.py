@@ -524,7 +524,7 @@ class TextGame:
 
         if stopwatch.properties["isActivated"]:
             stopwatch.properties["isActivated"] = False
-            return f"You activate the {stopwatch.name}."
+            return f"You deactivate the {stopwatch.name}."
         else:
             return f"The {stopwatch.name} has already been deactivated."
 

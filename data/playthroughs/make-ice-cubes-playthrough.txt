@@ -23,7 +23,7 @@ Game Won: False
 ----------------------------------------
 > examine freezer
 Observaton: a freezer that is currently open and contains the following items:
-        an ice cube cray that is empty
+        an ice cube tray that is empty
 
 
 Current step: 2

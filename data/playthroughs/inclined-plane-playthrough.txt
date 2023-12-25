@@ -178,7 +178,7 @@ Game Won: False
 
 ----------------------------------------
 > deactivate stopwatch
-Observaton: You activate the stopwatch.
+Observaton: You deactivate the stopwatch.
 
 Current step: 14
 Score: 0
