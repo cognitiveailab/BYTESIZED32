@@ -9,13 +9,14 @@ import datetime
 from logging import INFO
 from os.path import join as pjoin
 
-import openai
 import tiktoken
 from tqdm import tqdm
 from termcolor import colored
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
+from bytes32.utils import llm_gpt
 
 EXAMPLE_FILE = pjoin(os.path.dirname(__file__), "example.txt")
+
 
 def clean(s):
     clean_toks = ['\n', '\t']
@@ -28,49 +29,15 @@ def clean(s):
 
     return s
 
-@retry(
-    reraise=True,
-    stop=stop_after_attempt(1000),
-    wait=wait_exponential(multiplier=1, min=4, max=10),
-    retry=(
-        retry_if_exception_type(openai.error.Timeout)
-        | retry_if_exception_type(openai.error.APIError)
-        | retry_if_exception_type(openai.error.APIConnectionError)
-        | retry_if_exception_type(openai.error.RateLimitError)
-    ),
-)
-def llm_gpt(prompt, model="gpt-3.5-turbo", pbar=None, **kwargs):
+
+def llm_gpt_with_pbar(prompt, model, pbar=None, **kwargs):
     try:
-        if model == "gpt-4-0613":
-            response = openai.ChatCompletion.create(
-                model=model,
-                messages=[{"role": "user", "content": prompt}],
-                api_key=os.getenv("OPENAI_API_KEY2"),
-                api_base="https://api.openai.com/v1",
-                api_type="open_ai",
-                api_version="2020-11-07",
-                **kwargs,
-            )
-        elif openai.api_type == "azure":
-            # When using the Azure API, we need to use engine instead of model argument.
-            response = openai.ChatCompletion.create(
-                engine=model,
-                messages=[{"role": "user", "content": prompt}],
-                **kwargs,
-            )
-        else:
-            response = openai.ChatCompletion.create(
-                model=model,
-                messages=[{"role": "user", "content": prompt}],
-                **kwargs,
-            )
+        output = llm_gpt(prompt, model, pbar=pbar, **kwargs)
     except Exception as e:
         if pbar:
             pbar.set_postfix_str(f"[{datetime.datetime.now()}] {e}")
         raise e
 
-    choice = response["choices"][0]
-    output = choice["message"]["content"].strip()
     return output
 
 
