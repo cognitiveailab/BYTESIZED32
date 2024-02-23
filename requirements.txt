@@ -1,5 +1,6 @@
-openai
+openai>=1.0.0
 tiktoken
 pandas
 tqdm
 plotly
+tenacity

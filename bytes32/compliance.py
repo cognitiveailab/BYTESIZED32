@@ -4,14 +4,7 @@ import time
 import pandas as pd
 from termcolor import colored
 
-from bytes32.utils import llm_gpt, count_tokens
-
-
-def load_program(filename):
-    with open(filename, 'r') as f:
-        program = f.read()
-
-    return program
+from bytes32.utils import llm_gpt, count_tokens, load_program
 
 
 def build_requirement_text(evaluation_form_df, experiment, test_id):

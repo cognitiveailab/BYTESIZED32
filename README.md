@@ -16,7 +16,7 @@ pip install -e .
 ```
 
 ### API key
-You will need an OpenAI API key to run all of our experiments. Save your API key in plain text in `scripts/api-key` or set the environment variable `OPENAI_API_KEY` to your key.
+You will need an OpenAI API key to run the experiments. Set the environment variable `OPENAI_API_KEY` or `AZURE_OPENAI_API_KEY` to your key.
 
 ## Run Generation
 We run three ablation experiments, namely *object*, *action*, *distractor*.

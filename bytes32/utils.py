@@ -1,6 +1,8 @@
 import os
 import sys
+import time
 from functools import lru_cache
+from httpx import ReadError
 from requests.exceptions import ChunkedEncodingError
 
 import openai
@@ -8,6 +10,9 @@ import tiktoken
 
 from tqdm import tqdm
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
+
+client = openai.AzureOpenAI() if openai.api_type == "azure" else openai.OpenAI()
 
 
 if sys.version_info >= (3, 12):
@@ -44,27 +49,14 @@ def count_tokens(text, model=None):
     return len(tokenizer.encode(text))
 
 
-# OpenAI API Key
-try:
-    key_file = "api-key"
-    with open(key_file) as f:
-        OPENAI_API_KEY = f.read().strip()
-    openai.api_key = OPENAI_API_KEY
-except:
-    pass
-
-openai.api_key = openai.api_key or os.getenv("OPENAI_API_KEY")
-
-
 @retry(
     reraise=True,
     stop=stop_after_attempt(1000),
     wait=wait_exponential(multiplier=1, min=4, max=10),
     retry=(
-        retry_if_exception_type(openai.error.APIError)
-        | retry_if_exception_type(openai.error.APIConnectionError)
-        | retry_if_exception_type(openai.error.RateLimitError)
-        | retry_if_exception_type(openai.error.ServiceUnavailableError)
+        retry_if_exception_type(openai.APIError)
+        | retry_if_exception_type(openai.APIConnectionError)
+        | retry_if_exception_type(openai.RateLimitError)
     ),
 )
 def call_gpt(model, **kwargs):
@@ -72,16 +64,11 @@ def call_gpt(model, **kwargs):
     kwargs["top_p"] = 1
     kwargs["frequency_penalty"] = 0.0
     kwargs["presence_penalty"] = 0.0
-    kwargs["request_timeout"] = 4*10*60  # 40 minutes
-
-    if openai.api_type == "azure":
-        # When using the Azure API, we need to use engine instead of model argument.
-        kwargs["engine"] = model
-    else:
-        kwargs["model"] = model
+    kwargs["timeout"] = 4*10*60  # 40 minutes
+    kwargs["model"] = model
 
     try:
-        response = openai.ChatCompletion.create(**kwargs)
+        response = client.chat.completions.create(**kwargs)
     except Exception as e:
         print(e)
         raise e
@@ -94,19 +81,19 @@ def call_gpt(model, **kwargs):
     stop=stop_after_attempt(1000),
     wait=wait_exponential(multiplier=1, min=4, max=10),
     retry=(
-        retry_if_exception_type(openai.error.Timeout)
+        retry_if_exception_type(openai.Timeout)
     ),
 )
 def llm_gpt(prompt, model="gpt-3.5-turbo", n=1, **kwargs):
     response = call_gpt(model=model, messages=[{"role": "user", "content": prompt}], n=n, **kwargs)
 
     if n == 1:
-        choice = response["choices"][0]
-        output = choice["message"]["content"].strip()
+        choice = response.choices[0]
+        output = choice.message.content.strip()
     else:
         output = []
-        for choice in response["choices"]:
-            output.append(choice["message"]["content"].strip())
+        for choice in response.choices:
+            output.append(choice.message.content.strip())
 
     return output
 
@@ -121,7 +108,8 @@ def stream_llm_gpt(prompt, model="gpt-3.5-turbo", **kwargs):
             stream = call_gpt(stream=True, model=model, messages=messages, **kwargs)
             pbar = tqdm(stream, unit="token", total=kwargs.get("max_tokens", 8*1024), leave=False)
             for chunk in pbar:
-                chunk_content = chunk['choices'][0]['delta'].get('content')
+                time.sleep(0.01)  # Should help with Errno 104: Connection reset by peer https://stackoverflow.com/questions/383738/104-connection-reset-by-peer-socket-error-or-when-does-closing-a-socket-resu
+                chunk_content = chunk.choices[0].delta.content
 
                 if chunk_content:
                     response += chunk_content
@@ -133,7 +121,7 @@ def stream_llm_gpt(prompt, model="gpt-3.5-turbo", **kwargs):
                 pbar.close()
                 break
 
-        except (openai.error.Timeout, ChunkedEncodingError) as e:
+        except (openai.APITimeoutError, ChunkedEncodingError, ReadError) as e:
             # Append the response we received so far to messages.
             if len(messages) == 1:
                 messages.append({"role": "assistant", "content": response})
