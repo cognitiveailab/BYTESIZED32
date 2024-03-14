@@ -128,6 +128,9 @@ def stream_llm_gpt(prompt, model="gpt-3.5-turbo", **kwargs):
 
             messages[-1] = {"role": "assistant", "content": response}
             print(e)
+        except Exception as e:
+            print(e)
+            time.sleep(1)
 
     return response
 
