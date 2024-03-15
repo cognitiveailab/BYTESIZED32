@@ -2,7 +2,7 @@ import os
 import sys
 import time
 from functools import lru_cache
-from httpx import ReadError
+from httpx import ReadError, RemoteProtocolError
 from requests.exceptions import ChunkedEncodingError
 
 import openai
@@ -121,16 +121,13 @@ def stream_llm_gpt(prompt, model="gpt-3.5-turbo", **kwargs):
                 pbar.close()
                 break
 
-        except (openai.APITimeoutError, ChunkedEncodingError, ReadError) as e:
+        except (openai.APITimeoutError, ChunkedEncodingError, ReadError, RemoteProtocolError) as e:
             # Append the response we received so far to messages.
             if len(messages) == 1:
                 messages.append({"role": "assistant", "content": response})
 
             messages[-1] = {"role": "assistant", "content": response}
             print(e)
-        except Exception as e:
-            print(e)
-            time.sleep(1)
 
     return response
 
