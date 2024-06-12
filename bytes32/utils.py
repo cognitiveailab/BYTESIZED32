@@ -124,6 +124,9 @@ def stream_llm_gpt(prompt, model="gpt-3.5-turbo", **kwargs):
         except (openai.APITimeoutError, openai.APIError, ChunkedEncodingError, ReadError, RemoteProtocolError) as e:
             if isinstance(e, openai.APIError):
                 print("*****", e.type)
+                if "An error occurred during streaming" not in e.message:
+                    raise e
+
             # Append the response we received so far to messages.
             if len(messages) == 1:
                 messages.append({"role": "assistant", "content": response})
