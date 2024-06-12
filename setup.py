@@ -8,7 +8,6 @@ setup(
     author="Ruoyao Wang, Graham Todd, Eric Yuan, Ziang Xiao, Marc-Alexandre Côté, Peter Jansen",
     version=__version__,
     install_requires=open('requirements.txt').readlines(),
-    zip_safe=False,
     url="https://github.com/cognitiveailab/BYTESIZED32",
     description="Byte-sized text games for code generation tasks on virtual environments.",
     long_description=open("README.md").read(),
