@@ -1,0 +1,104 @@
+Task Description: Your task is to make ice cubes.
+
+Initial Observation: You find yourself in a kitchen.  In the kitchen, you see:
+        yourself
+        a freezer that is currently closed
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+> think: I will need some container to make the ice cubes in. I will need to fill the container with water and then put it in the freezer. I will need to wait for the water to freeze. I will need to remove the ice cubes from the container.
+> think: I will start by looking for a container.
+> open freezer
+The freezer is now open.
+
+> examine freezer
+a freezer that is currently open and contains the following items:
+        an ice cube cray that is empty
+
+> take ice cube tray
+The ice cube tray is removed from the freezer. You put the ice cube tray in your inventory.
+
+> think: I will need to fill the ice cube tray with water. Based on the possible commands, I have to move the ice cube tray to the sink and then turn on the sink.
+> put ice cube tray in sink
+The ice cube tray is removed from the agent.
+The ice cube tray is placed in the sink.
+
+> look
+You find yourself in a kitchen.  In the kitchen, you see:
+        yourself
+        a freezer that is currently open and empty
+        a sink that is currently off and that contains one or more items.
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+> examine sink
+a sink that is currently off and that contains the following items:
+        an ice cube cray that is empty
+
+
+> turn on sink
+The sink is now turned on.
+
+> examine sink
+a sink that is currently on and that contains the following items:
+        an ice cube cray that looks to have some water in it
+
+
+> turn off sink
+The sink is now turned off.
+
+think: I will need to put the ice cube tray in the freezer and wait for the water to freeze.
+> take ice cube tray
+The ice cube tray is removed from the sink. You put the ice cube tray in your inventory.
+
+> look
+You find yourself in a kitchen.  In the kitchen, you see:
+        yourself
+        a freezer that is currently open and empty
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+> put ice cube tray in freezer
+The ice cube tray is removed from the agent.
+The ice cube tray is placed in the freezer.
+
+> close freezer
+The freezer is now closed.
+
+> look
+You find yourself in a kitchen.  In the kitchen, you see:
+        yourself
+        a freezer that is currently closed
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+> look
+You find yourself in a kitchen.  In the kitchen, you see:
+        yourself
+        a freezer that is currently closed
+        a sink that is currently off and that is empty
+        a pot that is empty
+        a peanut butter
+        a orange
+
+
+> open freezer
+The freezer is now open.
+
+> examine freezer
+a freezer that is currently open and contains the following items:
+        an ice cube cray that looks to have some ice in it
+
+Current step: 18
+Score: 1
+Reward: 0
+Game Over: True
+Game Won: True
